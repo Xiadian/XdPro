@@ -1,0 +1,27 @@
+//
+//  XDHEAD.pch
+//  XDiOSdemo
+//
+//  Created by XiaDian on 2016/11/25.
+//  Copyright © 2016年 vdchina. All rights reserved.
+//
+
+#ifndef XDHEAD_pch
+#define XDHEAD_pch
+#ifdef __OBJC__ // 只被object－c文件所引用
+#import <UIKit/UIKit.h>
+//接口
+#import "API.h"
+//宏
+#import "DEFINE.h"
+#import "XDFACTORY.h"
+#import "Masonry.h"
+#import <objc/runtime.h>
+#import "AFNetworking.h"
+#import "MBProgressHUD/MBProgressHUD.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#endif
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* XDHEAD_pch */

@@ -54,11 +54,6 @@
     RAC(self.viewModel,psw)=self.pswTfd.rac_textSignal;
    RAC(self.loginBtn,enabled)=[self.viewModel pswSix];
     @weakify(self);
-//    [[self.viewModel.successSignal doNext:^(id x) {
-//        NSLog(@"登陆前");
-//    }] subscribeNext:^(id x) {
-//         NSLog(@"登陆前");
-//    }];
     [self.viewModel.successSignal subscribeNext:^(id x) {
         @strongify(self);
         if ([x isEqualToString:@"登陆成功"]) {

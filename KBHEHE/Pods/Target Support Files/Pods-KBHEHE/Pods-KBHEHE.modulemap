@@ -1,0 +1,6 @@
+framework module Pods_KBHEHE {
+  umbrella header "Pods-KBHEHE-umbrella.h"
+
+  export *
+  module * { export * }
+}

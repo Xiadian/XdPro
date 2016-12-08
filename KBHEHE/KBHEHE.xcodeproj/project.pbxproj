@@ -23,6 +23,7 @@
 		549081B41DF6C2310079085A /* LocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549081B31DF6C2310079085A /* LocalView.m */; };
 		549081B81DF6C24B0079085A /* LocalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549081B71DF6C24B0079085A /* LocalView.xib */; };
 		54C3A49A1DF7DB1B00122BB7 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3A4991DF7DB1B00122BB7 /* LoginViewModel.m */; };
+		54C3A49D1DF92D2C00122BB7 /* XDNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3A49C1DF92D2C00122BB7 /* XDNetRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		549081B71DF6C24B0079085A /* LocalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalView.xib; sourceTree = "<group>"; };
 		54C3A4981DF7DB1B00122BB7 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		54C3A4991DF7DB1B00122BB7 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		54C3A49B1DF92D2C00122BB7 /* XDNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDNetRequest.h; sourceTree = "<group>"; };
+		54C3A49C1DF92D2C00122BB7 /* XDNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDNetRequest.m; sourceTree = "<group>"; };
 		93AB9928E6B32DA6DBE54E69 /* Pods-KBHEHE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBHEHE.release.xcconfig"; path = "Pods/Target Support Files/Pods-KBHEHE/Pods-KBHEHE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +240,8 @@
 				0410C9DB1DF5BFD80056FD3F /* SZRFunction.m */,
 				0410C9DE1DF5C1EE0056FD3F /* SZRTableView.h */,
 				0410C9DF1DF5C1EE0056FD3F /* SZRTableView.m */,
+				54C3A49B1DF92D2C00122BB7 /* XDNetRequest.h */,
+				54C3A49C1DF92D2C00122BB7 /* XDNetRequest.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0410C99A1DF5B6C30056FD3F /* AppDelegate.m in Sources */,
+				54C3A49D1DF92D2C00122BB7 /* XDNetRequest.m in Sources */,
 				549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */,
 				0410C9971DF5B6C30056FD3F /* main.m in Sources */,
 				0410C9DC1DF5BFD80056FD3F /* SZRFunction.m in Sources */,

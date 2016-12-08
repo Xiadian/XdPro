@@ -76,9 +76,8 @@ typedef void(^actionBlock) (NSInteger indexPath);
 /**
  *  创建UIAlertController弹窗
  *  @param title        标题
- *  @param extMessage   标题消息
+ *  @param message   标题消息
  *  @param ButtonMessages 设置按钮的信息
- *  @param action      按钮的回调
  *  @param viewVC      控制器
  */
 + (void)createAlertViewTextTitle:(NSString *)title withTextMessage:(NSString *)message WithButtonMessages:(NSArray* )ButtonMessages Action:(actionBlock)actionBlock viewVC:(UIViewController* )viewVC;
@@ -107,7 +106,6 @@ typedef void(^actionBlock) (NSInteger indexPath);
 /**
  *  创建阴影视图
  *
- *  @param block 点击阴影视图回调
  *
  *  @return 阴影视图
  */

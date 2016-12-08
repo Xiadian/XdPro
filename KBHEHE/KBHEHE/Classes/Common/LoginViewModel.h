@@ -10,6 +10,7 @@
 
 @interface LoginViewModel : NSObject
 @property(nonatomic,strong)RACSubject *successSignal;
+@property(nonatomic,strong)RACSubject *failSignal;
 @property(nonatomic,strong)NSString *psw;
 @property(nonatomic,strong)NSString *tele;
 

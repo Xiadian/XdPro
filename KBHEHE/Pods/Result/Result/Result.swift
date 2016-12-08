@@ -117,13 +117,13 @@ public enum Result<T, Error: ResultErrorType>: ResultType, CustomStringConvertib
 #if swift(>=3)
 	public static func error(_ message: String? = nil, function: String = #function, file: String = #file, line: Int = #line) -> NSError {
 		var userInfo: [String: UserInfoType] = [
-		                                       	functionKey: function,
-		                                       	fileKey: file,
-		                                       	lineKey: line,
+		                                       	functionKey: function as AnyObject,
+		                                       	fileKey: file as AnyObject,
+		                                       	lineKey: line as AnyObject,
 		                                       	]
 		
 		if let message = message {
-			userInfo[NSLocalizedDescriptionKey] = message
+			userInfo[NSLocalizedDescriptionKey] = message as Result.UserInfoType?
 		}
 		
 		return NSError(domain: errorDomain, code: 0, userInfo: userInfo)

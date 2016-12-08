@@ -24,23 +24,27 @@
     return self;
 }
 -(void)initBind{
+    self.failSignal=[[RACSubject alloc]init];
     self.successSignal=[[RACSubject alloc]init];
     self.pswSignal=RACObserve(self, psw);
     self.teleSignal=RACObserve(self, tele);
-//  RACSignal *ff=[self.successSignal flattenMap:^RACStream *(id value) {
-//        value = [NSString stringWithFormat:@"xmg%@",value];
-//        // 返回值:信号,把处理完的值包装成信号返回出去
-//      return  [RACReturnSignal return:value];
-////        return [RACStream return:value];
-//    }];   
+
 }
 -(void)login{
-    [self.successSignal sendNext:@"登陆成功"];
+        [XDNetRequest XDRequsetType:GET withRequestUrl:@"http://api.chuandazhiapp.com/v1/banners" withPragram:@{@"channel":@"iOS"} withSuccessBlock:^(id response) {
+           RACTuple *tuple = RACTuplePack(@"登陆成功",response);
+           [self.successSignal sendNext:tuple];
+       } failure:^(NSError *error) {
+           NSLog(@"%@",error);
+       }];
 }
 -(id)pswSix{
     RACSignal *signal=[RACSignal combineLatest:@[self.pswSignal,self.teleSignal] reduce:^id(NSString *psw,NSString *tele){
+        NSLog(@"dfsdf");
         return  @(psw.length>3&&tele.length>3);
     }];
-    return  signal;
+    
+//RACSignal *signal=[self.pswSignal concat:self.teleSignal];
+    return  self.pswSignal;
 }
 @end

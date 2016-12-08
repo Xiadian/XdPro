@@ -53,18 +53,19 @@
     RAC(self.viewModel,tele)=self.teleTfd.rac_textSignal;
     RAC(self.viewModel,psw)=self.pswTfd.rac_textSignal;
    RAC(self.loginBtn,enabled)=[self.viewModel pswSix];
+    
     @weakify(self);
     [self.viewModel.successSignal subscribeNext:^(id x) {
         @strongify(self);
-        if ([x isEqualToString:@"登陆成功"]) {
+        RACTupleUnpack(NSString *str,NSNumber *num) = x;
+        NSLog(@"%@",num);
+        
+        if ([str isEqualToString:@"登陆成功"]) {
             MineViewController *mVC=[[MineViewController alloc]init];
             [self.navigationController pushViewController:mVC animated:YES];
         }
     }];
-    [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler] ]take:5]subscribeNext:^(id x) {
-        
-    }];
-}
+ }
 -(void)Config{
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"nagvation_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(25, 100, 10, 0) resizingMode:UIImageResizingModeStretch] forBarMetrics:UIBarMetricsDefault];
      [SZRFunction SZRSetLayerImage:self.view imageStr:@"dl-bj"];
@@ -118,6 +119,7 @@
     self.loginBtn.layer.cornerRadius=10;
     self.loginBtn.clipsToBounds=YES;
     [self.loginBtn addTarget:self action:@selector(loginClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginBtn setTitleColor:RGBCOLOR(26,200,154) forState:UIControlStateDisabled];
     [self.bottomView addSubview:self.loginBtn];
     //注册按钮
     self.registBtn=[UIButton new];

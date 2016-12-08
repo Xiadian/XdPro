@@ -60,6 +60,7 @@
 #import "AppDelegate.h"
 // 导入工程文件
 #import "SZRFunction.h"
+#import "XDNetRequest.h"
 // 约束
 #import <Masonry/Masonry.h>
 #import "metamacros.h"

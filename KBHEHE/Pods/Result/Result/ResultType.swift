@@ -1,7 +1,7 @@
 //  Copyright (c) 2015 Rob Rix. All rights reserved.
 
 #if swift(>=3.0)
-	public typealias ResultErrorType = ErrorProtocol
+	public typealias ResultErrorType = Error
 #else
 	public typealias ResultErrorType = ErrorType
 #endif
@@ -228,9 +228,9 @@ public func >>- <T: ResultType, U> (result: T, @noescape transform: T.Value -> R
 
 /// Returns `true` if `left` and `right` are both `Success`es and their values are equal, or if `left` and `right` are both `Failure`s and their errors are equal.
 public func == <T: ResultType where T.Value: Equatable, T.Error: Equatable> (left: T, right: T) -> Bool {
-	if let left = left.value, right = right.value {
+	if let left = left.value, let right = right.value {
 		return left == right
-	} else if let left = left.error, right = right.error {
+	} else if let left = left.error, let right = right.error {
 		return left == right
 	}
 	return false

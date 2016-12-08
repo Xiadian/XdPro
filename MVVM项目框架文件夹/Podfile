@@ -1,0 +1,13 @@
+#响应编程框架
+use_frameworks!
+pod'ReactiveCocoa','~>4.2.1'
+#网络请求
+pod'AFNetworking'
+#刷新
+pod'MJRefresh'
+#HUD
+pod'MBProgressHUD'
+#图片缓存
+pod'SDWebImage'
+#布局
+pod 'Masonry'

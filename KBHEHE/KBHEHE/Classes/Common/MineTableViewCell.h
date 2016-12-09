@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface MineTableViewCell : UITableViewCell
 //背景view
 @property (weak, nonatomic) IBOutlet UIView *bgView;

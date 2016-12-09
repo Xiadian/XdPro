@@ -35,15 +35,14 @@
            RACTuple *tuple = RACTuplePack(@"登陆成功",response);
            [self.successSignal sendNext:tuple];
        } failure:^(NSError *error) {
-           NSLog(@"%@",error);
+        //   NSLog(@"%@",error);
        }];
 }
 -(id)pswSix{
     RACSignal *signal=[RACSignal combineLatest:@[self.pswSignal,self.teleSignal] reduce:^id(NSString *psw,NSString *tele){
-        NSLog(@"dfsdf");
+      //  NSLog(@"dfsdf");
         return  @(psw.length>3&&tele.length>3);
     }];
-    
 //RACSignal *signal=[self.pswSignal concat:self.teleSignal];
     return  self.pswSignal;
 }

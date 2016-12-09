@@ -58,7 +58,7 @@
     [self.viewModel.successSignal subscribeNext:^(id x) {
         @strongify(self);
         RACTupleUnpack(NSString *str,NSNumber *num) = x;
-        NSLog(@"%@",num);
+    //    NSLog(@"%@",num);
         
         if ([str isEqualToString:@"登陆成功"]) {
             MineViewController *mVC=[[MineViewController alloc]init];

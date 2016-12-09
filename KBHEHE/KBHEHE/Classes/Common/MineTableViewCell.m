@@ -20,7 +20,6 @@
     self.messegeLabel.hidden=YES;
     self.backgroundColor=[UIColor clearColor];
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

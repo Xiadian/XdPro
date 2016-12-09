@@ -16,6 +16,7 @@
 		0410C9DC1DF5BFD80056FD3F /* SZRFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410C9DB1DF5BFD80056FD3F /* SZRFunction.m */; };
 		0410C9E01DF5C1EE0056FD3F /* SZRTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410C9DF1DF5C1EE0056FD3F /* SZRTableView.m */; };
 		3FA60FAC520D9125FDD5D334 /* Pods_KBHEHE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA0485B3D5C153AD509627 /* Pods_KBHEHE.framework */; };
+		5429D26B1DF98F3400A52F8B /* MIneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429D26A1DF98F3400A52F8B /* MIneViewModel.m */; };
 		5431184C1DF65F19002C5965 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431184B1DF65F19002C5965 /* LoginViewController.m */; };
 		5490819E1DF697DB0079085A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490819D1DF697DB0079085A /* MineViewController.m */; };
 		549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549081AB1DF6BB880079085A /* MineTableViewCell.m */; };
@@ -64,6 +65,8 @@
 		0410C9E11DF5C6030056FD3F /* KBPCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBPCH.pch; sourceTree = "<group>"; };
 		4624869AA0395301DF20646A /* Pods-KBHEHE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBHEHE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KBHEHE/Pods-KBHEHE.debug.xcconfig"; sourceTree = "<group>"; };
 		51CA0485B3D5C153AD509627 /* Pods_KBHEHE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBHEHE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5429D2691DF98F3400A52F8B /* MIneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneViewModel.h; sourceTree = "<group>"; };
+		5429D26A1DF98F3400A52F8B /* MIneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneViewModel.m; sourceTree = "<group>"; };
 		5431184A1DF65F19002C5965 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5431184B1DF65F19002C5965 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5490819C1DF697DB0079085A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				549081B71DF6C24B0079085A /* LocalView.xib */,
 				54C3A4981DF7DB1B00122BB7 /* LoginViewModel.h */,
 				54C3A4991DF7DB1B00122BB7 /* LoginViewModel.m */,
+				5429D2691DF98F3400A52F8B /* MIneViewModel.h */,
+				5429D26A1DF98F3400A52F8B /* MIneViewModel.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0410C99A1DF5B6C30056FD3F /* AppDelegate.m in Sources */,
+				5429D26B1DF98F3400A52F8B /* MIneViewModel.m in Sources */,
 				54C3A49D1DF92D2C00122BB7 /* XDNetRequest.m in Sources */,
 				549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */,
 				0410C9971DF5B6C30056FD3F /* main.m in Sources */,

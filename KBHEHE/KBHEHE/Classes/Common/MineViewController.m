@@ -7,6 +7,7 @@
 //
 #import "MineViewController.h"
 #import "MineTableViewCell.h"
+#import "MIneViewModel.h"
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 //上部View
 @property(nonatomic,strong)UIView *topView;
@@ -30,6 +31,9 @@
 @property(nonatomic,strong)NSArray *dataArr1;
 //模拟数据数组2
 @property(nonatomic,strong)NSArray *dataArr2;
+//viewModel
+@property(nonatomic,strong)MIneViewModel *viewModel;
+
 @end
 @implementation MineViewController
 - (void)viewDidLoad {
@@ -38,14 +42,19 @@
     [self Config];
     //UI
     [self CreatUI];
+    [self bindModel];
     //适配
     [self LayOutUI];
+}
+-(void)bindModel{
+    self.viewModel=[[MIneViewModel alloc]init];
+    RAC(self,dataArr1)=self.viewModel.daraArrSignal;
 }
 -(void)Config{
     [SZRFunction SZRSetLayerImage:self.view imageStr:@"dl-bj"];
     self.navigationItem.title=@"心理咨询师";
   //  self.navigationItem.hidesBackButton=YES;
-    self.dataArr1=@[@"我的用户",@"出诊记录",@"待签约",@"我的钱包"];
+  //  self.dataArr1=@[@"我的用户",@"出诊记录",@"待签约",@"我的钱包"];
     self.dataArr2=@[@"rx",@"logo2",@"dqy",@"qb"];
     //右上角按钮
     UIImage *aimage = [UIImage imageNamed:@"ltx"];
@@ -189,5 +198,8 @@
 }
 //右上角按钮
 -(void)userClick:(id)sender{
+      [self.viewModel getModelSuccessBlock:^{
+          [self.midTableView reloadData];
+      } withFailureBlock:nil];
 }
 @end

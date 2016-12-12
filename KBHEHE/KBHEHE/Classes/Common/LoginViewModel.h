@@ -13,7 +13,6 @@
 @property(nonatomic,strong)RACSubject *failSignal;
 @property(nonatomic,strong)NSString *psw;
 @property(nonatomic,strong)NSString *tele;
-
 -(id)pswSix;
 -(void)login;
 @end

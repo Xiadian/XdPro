@@ -40,10 +40,9 @@
 }
 -(id)pswSix{
     RACSignal *signal=[RACSignal combineLatest:@[self.pswSignal,self.teleSignal] reduce:^id(NSString *psw,NSString *tele){
-      //  NSLog(@"dfsdf");
         return  @(psw.length>3&&tele.length>3);
     }];
 //RACSignal *signal=[self.pswSignal concat:self.teleSignal];
-    return  self.pswSignal;
+    return  signal;
 }
 @end

@@ -5,7 +5,6 @@
 //  Created by XiaDian on 2016/12/6.
 //  Copyright © 2016年 KeBun. All rights reserved.
 //
-
 #import "LoginViewController.h"
 #import "MineViewController.h"
 #import "LocalView.h"
@@ -52,14 +51,12 @@
     self.viewModel=[[LoginViewModel alloc]init];
     RAC(self.viewModel,tele)=self.teleTfd.rac_textSignal;
     RAC(self.viewModel,psw)=self.pswTfd.rac_textSignal;
-   RAC(self.loginBtn,enabled)=[self.viewModel pswSix];
-    
+    RAC(self.loginBtn,enabled)=[self.viewModel pswSix];
     @weakify(self);
     [self.viewModel.successSignal subscribeNext:^(id x) {
         @strongify(self);
         RACTupleUnpack(NSString *str,NSNumber *num) = x;
-    //    NSLog(@"%@",num);
-        
+        NSLog(@"%@",num);
         if ([str isEqualToString:@"登陆成功"]) {
             MineViewController *mVC=[[MineViewController alloc]init];
             [self.navigationController pushViewController:mVC animated:YES];
@@ -71,8 +68,6 @@
      [SZRFunction SZRSetLayerImage:self.view imageStr:@"dl-bj"];
     self.navigationItem.title=@"合合健康管理";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-   
-
 }
 #pragma mark创建UI
 -(void)CreatUI{

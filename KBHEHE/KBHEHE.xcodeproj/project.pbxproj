@@ -17,6 +17,7 @@
 		0410C9E01DF5C1EE0056FD3F /* SZRTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410C9DF1DF5C1EE0056FD3F /* SZRTableView.m */; };
 		3FA60FAC520D9125FDD5D334 /* Pods_KBHEHE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA0485B3D5C153AD509627 /* Pods_KBHEHE.framework */; };
 		5429D26B1DF98F3400A52F8B /* MIneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429D26A1DF98F3400A52F8B /* MIneViewModel.m */; };
+		5429D26E1DFAA45A00A52F8B /* tu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429D26D1DFAA45A00A52F8B /* tu.m */; };
 		5431184C1DF65F19002C5965 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431184B1DF65F19002C5965 /* LoginViewController.m */; };
 		5490819E1DF697DB0079085A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490819D1DF697DB0079085A /* MineViewController.m */; };
 		549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549081AB1DF6BB880079085A /* MineTableViewCell.m */; };
@@ -67,6 +68,8 @@
 		51CA0485B3D5C153AD509627 /* Pods_KBHEHE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBHEHE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5429D2691DF98F3400A52F8B /* MIneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneViewModel.h; sourceTree = "<group>"; };
 		5429D26A1DF98F3400A52F8B /* MIneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneViewModel.m; sourceTree = "<group>"; };
+		5429D26C1DFAA45A00A52F8B /* tu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tu.h; sourceTree = "<group>"; };
+		5429D26D1DFAA45A00A52F8B /* tu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tu.m; sourceTree = "<group>"; };
 		5431184A1DF65F19002C5965 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5431184B1DF65F19002C5965 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5490819C1DF697DB0079085A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				54C3A4991DF7DB1B00122BB7 /* LoginViewModel.m */,
 				5429D2691DF98F3400A52F8B /* MIneViewModel.h */,
 				5429D26A1DF98F3400A52F8B /* MIneViewModel.m */,
+				5429D26C1DFAA45A00A52F8B /* tu.h */,
+				5429D26D1DFAA45A00A52F8B /* tu.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				0410C9DC1DF5BFD80056FD3F /* SZRFunction.m in Sources */,
 				549081B41DF6C2310079085A /* LocalView.m in Sources */,
 				5490819E1DF697DB0079085A /* MineViewController.m in Sources */,
+				5429D26E1DFAA45A00A52F8B /* tu.m in Sources */,
 				0410C9E01DF5C1EE0056FD3F /* SZRTableView.m in Sources */,
 				5431184C1DF65F19002C5965 /* LoginViewController.m in Sources */,
 				54C3A49A1DF7DB1B00122BB7 /* LoginViewModel.m in Sources */,

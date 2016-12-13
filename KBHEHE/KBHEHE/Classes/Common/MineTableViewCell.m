@@ -7,7 +7,6 @@
 //
 
 #import "MineTableViewCell.h"
-
 @implementation MineTableViewCell
 
 - (void)awakeFromNib {

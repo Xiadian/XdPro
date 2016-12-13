@@ -52,17 +52,8 @@
     RAC(self.viewModel,tele)=self.teleTfd.rac_textSignal;
     RAC(self.viewModel,psw)=self.pswTfd.rac_textSignal;
     RAC(self.loginBtn,enabled)=[self.viewModel pswSix];
-    @weakify(self);
-    [self.viewModel.successSignal subscribeNext:^(id x) {
-        @strongify(self);
-        RACTupleUnpack(NSString *str,NSNumber *num) = x;
-        NSLog(@"%@",num);
-        if ([str isEqualToString:@"登陆成功"]) {
-            MineViewController *mVC=[[MineViewController alloc]init];
-            [self.navigationController pushViewController:mVC animated:YES];
-        }
-    }];
- }
+    [self loginEvents];
+}
 -(void)Config{
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"nagvation_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(25, 100, 10, 0) resizingMode:UIImageResizingModeStretch] forBarMetrics:UIBarMetricsDefault];
      [SZRFunction SZRSetLayerImage:self.view imageStr:@"dl-bj"];
@@ -206,6 +197,23 @@
 //登陆按钮点击事件
 -(void)loginClick:(id)sender{
     [self.viewModel login];
+}
+-(void)loginEvents{
+    //登陆成功情况
+    @weakify(self);
+    [self.viewModel.successSignal subscribeNext:^(id x) {
+        @strongify(self);
+        RACTupleUnpack(NSString *str,NSNumber *num) = x;
+        NSLog(@"%@",num);
+        if ([str isEqualToString:@"登陆成功"]) {
+            MineViewController *mVC=[[MineViewController alloc]init];
+            [self.navigationController pushViewController:mVC animated:YES];
+        }
+    }];
+    //登陆失败情况
+    [self.viewModel.failSignal subscribeNext:^(id x) {
+        
+    }];
 }
 //注册点击事件
 -(void)registClick:(id)sender{

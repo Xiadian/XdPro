@@ -198,14 +198,6 @@
 }
 //右上角按钮
 -(void)userClick:(id)sender{
-    //sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    //sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    //sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    //sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    //sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-
- 
-  
       [self.viewModel getModelSuccessBlock:^{
           [self.midTableView reloadData];
       } withFailureBlock:nil];

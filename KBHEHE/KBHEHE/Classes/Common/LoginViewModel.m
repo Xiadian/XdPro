@@ -31,16 +31,16 @@
 
 }
 -(void)login{
-        [XDNetRequest XDRequsetType:GET withRequestUrl:@"http://api.chuandazhiapp.com/v1/banners" withPragram:@{@"channel":@"iOS"} withSuccessBlock:^(id response) {
-           RACTuple *tuple = RACTuplePack(@"登陆成功",response);
-           [self.successSignal sendNext:tuple];
-       } failure:^(NSError *error) {
-        //   NSLog(@"%@",error);
-       }];
+    [XDNetRequest XDHUDRequsetType:GET withRequestUrl:@"http://api.chuandazhiapp.com/v1/banners" withPragram:@{@"channel":@"iOS"} withSuccessBlock:^(id response) {
+          RACTuple *tuple = RACTuplePack(@"登陆成功",response);
+        [self.successSignal sendNext:tuple];
+    } failure:^(NSError *error) {
+        
+    } withHUDTitle:nil];
 }
 -(id)pswSix{
     RACSignal *signal=[RACSignal combineLatest:@[self.pswSignal,self.teleSignal] reduce:^id(NSString *psw,NSString *tele){
-        return  @(psw.length>3&&tele.length>3);
+        return  @(psw.length>=3&&tele.length>=3);
     }];
 //RACSignal *signal=[self.pswSignal concat:self.teleSignal];
     return  signal;

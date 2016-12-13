@@ -19,6 +19,7 @@
 		5429D26B1DF98F3400A52F8B /* MIneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429D26A1DF98F3400A52F8B /* MIneViewModel.m */; };
 		5429D26E1DFAA45A00A52F8B /* tu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429D26D1DFAA45A00A52F8B /* tu.m */; };
 		5431184C1DF65F19002C5965 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431184B1DF65F19002C5965 /* LoginViewController.m */; };
+		543F802F1DFFA7B30061521D /* XDMBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 543F802E1DFFA7B30061521D /* XDMBHUD.m */; };
 		5490819E1DF697DB0079085A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490819D1DF697DB0079085A /* MineViewController.m */; };
 		549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549081AB1DF6BB880079085A /* MineTableViewCell.m */; };
 		549081AE1DF6BB880079085A /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549081AC1DF6BB880079085A /* MineTableViewCell.xib */; };
@@ -72,6 +73,8 @@
 		5429D26D1DFAA45A00A52F8B /* tu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tu.m; sourceTree = "<group>"; };
 		5431184A1DF65F19002C5965 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5431184B1DF65F19002C5965 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		543F802D1DFFA7B30061521D /* XDMBHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMBHUD.h; sourceTree = "<group>"; };
+		543F802E1DFFA7B30061521D /* XDMBHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMBHUD.m; sourceTree = "<group>"; };
 		5490819C1DF697DB0079085A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		5490819D1DF697DB0079085A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		549081AA1DF6BB880079085A /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				0410C9DF1DF5C1EE0056FD3F /* SZRTableView.m */,
 				54C3A49B1DF92D2C00122BB7 /* XDNetRequest.h */,
 				54C3A49C1DF92D2C00122BB7 /* XDNetRequest.m */,
+				543F802D1DFFA7B30061521D /* XDMBHUD.h */,
+				543F802E1DFFA7B30061521D /* XDMBHUD.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 			files = (
 				0410C99A1DF5B6C30056FD3F /* AppDelegate.m in Sources */,
 				5429D26B1DF98F3400A52F8B /* MIneViewModel.m in Sources */,
+				543F802F1DFFA7B30061521D /* XDMBHUD.m in Sources */,
 				54C3A49D1DF92D2C00122BB7 /* XDNetRequest.m in Sources */,
 				549081AD1DF6BB880079085A /* MineTableViewCell.m in Sources */,
 				0410C9971DF5B6C30056FD3F /* main.m in Sources */,

@@ -7,7 +7,10 @@
 //
 #import "XDNetRequest.h"
 #import <AFNetworking/AFNetworking.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#define XDWINDOW         [[UIApplication sharedApplication].windows lastObject]
+@interface XDNetRequest ()
+@end
 @implementation XDNetRequest
 - (instancetype)init
 {
@@ -17,7 +20,8 @@
     }
     return self;
 }
-+(void)XDRequsetType:(requestType)type withRequestUrl:(NSString *)url withPragram:(NSDictionary *)pragramDic withSuccessBlock:(successBlock)successBlock failure:(failureBlock) failBlock{
+
++(void)XDRequsetType:(requestType)type withRequestUrl:(NSString *)url withPragram:(NSDictionary *)pragramDic withSuccessBlock:(netSuccessBlock)successBlock failure:(netFailureBlock) failureBlock{
     switch (type) {
         case GET:
         {
@@ -25,7 +29,7 @@
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             successBlock(responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            failBlock(error);
+            failureBlock(error);
         }];
         }
             break;
@@ -34,12 +38,22 @@
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 successBlock(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                failBlock(error);
+                failureBlock(error);
             }];
         }
             break;
         default:
             break;
     }
+}
++(void)XDHUDRequsetType:(requestType)type withRequestUrl:(NSString *)url withPragram:(NSDictionary *)pragramDic withSuccessBlock:(netSuccessBlock)successBlock failure:(netFailureBlock)failureBlock withHUDTitle:(NSString *)hudTitle{
+    MBProgressHUD *  hud=[MBProgressHUD showHUDAddedTo:XDWINDOW animated:YES];
+    hud.label.text=hudTitle;
+    [XDNetRequest XDRequsetType:type withRequestUrl:url withPragram:pragramDic withSuccessBlock:^(id response) {
+        [hud hideAnimated:YES];
+        successBlock(response);
+    } failure:^(NSError *error) {
+        failureBlock(error);
+    }];
 }
 @end

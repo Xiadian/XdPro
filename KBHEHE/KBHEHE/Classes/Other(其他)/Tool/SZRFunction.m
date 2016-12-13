@@ -9,11 +9,8 @@
 #import "SZRFunction.h"
 #define iOS8 [[UIDevice currentDevice].systemVersion doubleValue] >= 8.0
 @interface SZRFunction()<UIAlertViewDelegate>
-
 @end
 @implementation SZRFunction
-
-
 //构建富文本
 +(NSMutableAttributedString *)SZRCreateAttriStrWithStr:(NSString *)str
                                             withSubStr:(NSString *)subStr

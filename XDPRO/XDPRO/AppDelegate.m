@@ -7,26 +7,20 @@
 //
 
 #import "AppDelegate.h"
-#import "LuanchViewController.h"
 #import "XDNVC.h"
 #import "CocoaMVVMViewController.h"
-#import "YTKNetworkConfig.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()
 @end
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-//  //  LuanchViewController *ff=[[LuanchViewController alloc]init];
-//    CocoaMVVMViewController *ff=[[CocoaMVVMViewController alloc]init];
-//
-//    XDNVC *xdnvc=[[XDNVC alloc]initWithRootViewController:ff];
-//    self.window.rootViewController=xdnvc;
-//    [self.window makeKeyAndVisible];
-//    YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-//    config.baseUrl = @"http://121.52.217.251:8080";
-//    config.cdnUrl = @"http://fen.bi";
-//    // Override point for customization after application launch.
-
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+  //  LuanchViewController *ff=[[LuanchViewController alloc]init];
+    LoginViewController *ff=[[LoginViewController alloc]init];
+    XDNVC *xdnvc=[[XDNVC alloc]initWithRootViewController:ff];
+    self.window.rootViewController=xdnvc;
+    [self.window makeKeyAndVisible];
+  //    // Override point for customization after application launch.
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

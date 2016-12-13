@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @interface BaseViewController : UIViewController
 
 @end

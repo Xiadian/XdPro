@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YTKRequest.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "XDNetRequest.h"
 @interface BaseViewModel :NSObject
 
 @end

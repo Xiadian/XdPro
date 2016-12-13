@@ -7,15 +7,11 @@
 //
 
 #import "CocoaMVVMViewController.h"
-#import "LuanchViewModel.h"
 #import <WebKit/WebKit.h>
 @interface CocoaMVVMViewController ()
 @property(nonatomic,strong)UIButton *lefBtn;
 @property(nonatomic,strong)UIButton *rightBtn;
 @property(nonatomic,strong)WKWebView *textField;
-
-
-@property(nonatomic,strong)LuanchViewModel *dd;
 @end
 @implementation CocoaMVVMViewController
 - (void)viewDidLoad {
@@ -29,7 +25,7 @@
 //uppercaseString use map
 - (void)uppercaseString {
     
-    RACSequence *sequence = [@[@"you", @"are", @"beautiful"] rac_sequence];
+ //   RACSequence *sequence = [@[@"you", @"are", @"beautiful"] rac_sequence];
     
   //  RACSignal *signal =  sequence.signal;
     RACSignal *signal =[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {

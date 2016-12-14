@@ -49,9 +49,9 @@
 +(void)XDHUDRequsetType:(requestType)type withRequestUrl:(NSString *)url withPragram:(NSDictionary *)pragramDic withSuccessBlock:(netSuccessBlock)successBlock failure:(netFailureBlock)failureBlock withHUDTitle:(NSString *)hudTitle{
     MBProgressHUD *  hud=[MBProgressHUD showHUDAddedTo:XDWINDOW animated:YES];
     hud.label.text=hudTitle;
-    [XDNetRequest XDRequsetType:type withRequestUrl:url withPragram:pragramDic withSuccessBlock:^(id response) {
-        [hud hideAnimated:YES];
+    [XDNetRequest XDRequsetType:type withRequestUrl:url withPragram:pragramDic withSuccessBlock:^(id response) {      
         successBlock(response);
+          [hud hideAnimated:YES];
     } failure:^(NSError *error) {
         failureBlock(error);
     }];

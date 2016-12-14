@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "MJRefresh.h"
 @interface BaseViewController : UIViewController
 
 @end

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		456FB05754BC4C7FC117846A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4ED7DFB2061E016C830436 /* Pods.framework */; };
+		540426401E01134200AC9D5D /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5404263F1E01134200AC9D5D /* ProductModel.m */; };
+		540426441E01234300AC9D5D /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 540426421E01234300AC9D5D /* ProductTableViewCell.m */; };
+		540426451E01234300AC9D5D /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540426431E01234300AC9D5D /* ProductTableViewCell.xib */; };
 		543F80321DFFCDCD0061521D /* XDNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 543F80311DFFCDCD0061521D /* XDNetRequest.m */; };
 		543F803C1DFFD5D90061521D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543F803A1DFFD5D90061521D /* LoginViewController.m */; };
 		543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543F803B1DFFD5D90061521D /* LoginViewController.xib */; };
@@ -34,6 +37,9 @@
 		5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979301DEFCD8D00485AED /* YTKNetworkConfig.m */; };
 		5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979321DEFCD8D00485AED /* YTKNetworkPrivate.m */; };
 		5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979341DEFCD8D00485AED /* YTKRequest.m */; };
+		54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C1C1E001C6A00F96DB9 /* ProductViewController.m */; };
+		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
+		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5404263E1E01134200AC9D5D /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
+		5404263F1E01134200AC9D5D /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
+		540426411E01234300AC9D5D /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		540426421E01234300AC9D5D /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
+		540426431E01234300AC9D5D /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		543F80301DFFCDC40061521D /* XDNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDNetRequest.h; sourceTree = "<group>"; };
 		543F80311DFFCDCD0061521D /* XDNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDNetRequest.m; sourceTree = "<group>"; };
 		543F80391DFFD5D90061521D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -110,6 +121,11 @@
 		544979321DEFCD8D00485AED /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
 		544979331DEFCD8D00485AED /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
 		544979341DEFCD8D00485AED /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
+		54758C1B1E001C6A00F96DB9 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		54758C1C1E001C6A00F96DB9 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		54758C211E00218700F96DB9 /* ProductViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewModel.h; sourceTree = "<group>"; };
+		54758C221E00218700F96DB9 /* ProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewModel.m; sourceTree = "<group>"; };
 		6D4ED7DFB2061E016C830436 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D56C0493865CD82F9BCF2E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B40A7C9D2DDC523A3E2C4F3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +164,15 @@
 				A0D56C0493865CD82F9BCF2E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5404263D1E01132800AC9D5D /* ProductModel */ = {
+			isa = PBXGroup;
+			children = (
+				5404263E1E01134200AC9D5D /* ProductModel.h */,
+				5404263F1E01134200AC9D5D /* ProductModel.m */,
+			);
+			name = ProductModel;
 			sourceTree = "<group>";
 		};
 		543F80331DFFCF370061521D /* pracoco */ = {
@@ -305,6 +330,7 @@
 		544978E91DEC13B900485AED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5404263D1E01132800AC9D5D /* ProductModel */,
 				544978EA1DEC13B900485AED /* BaseModel */,
 			);
 			path = Model;
@@ -322,6 +348,7 @@
 		544978ED1DEC13B900485AED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				54758C201E00214F00F96DB9 /* ProductViewModel */,
 				543F803E1DFFDC5E0061521D /* LoginVIewModel */,
 				544978EE1DEC13B900485AED /* BaseViewModel */,
 			);
@@ -349,6 +376,7 @@
 		544978F31DEC13B900485AED /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				54758C1A1E001C1600F96DB9 /* ProductViewController */,
 				543F80351DFFD2070061521D /* LoginViewController */,
 				543F80331DFFCF370061521D /* pracoco */,
 				544978F41DEC13B900485AED /* BaseViewController */,
@@ -428,6 +456,28 @@
 				544979341DEFCD8D00485AED /* YTKRequest.m */,
 			);
 			path = YTKNetwork;
+			sourceTree = "<group>";
+		};
+		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54758C1B1E001C6A00F96DB9 /* ProductViewController.h */,
+				54758C1C1E001C6A00F96DB9 /* ProductViewController.m */,
+				54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */,
+				540426411E01234300AC9D5D /* ProductTableViewCell.h */,
+				540426421E01234300AC9D5D /* ProductTableViewCell.m */,
+				540426431E01234300AC9D5D /* ProductTableViewCell.xib */,
+			);
+			name = ProductViewController;
+			sourceTree = "<group>";
+		};
+		54758C201E00214F00F96DB9 /* ProductViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54758C211E00218700F96DB9 /* ProductViewModel.h */,
+				54758C221E00218700F96DB9 /* ProductViewModel.m */,
+			);
+			name = ProductViewModel;
 			sourceTree = "<group>";
 		};
 		DDBDEB3EAF1B5A44C0A9CE08 /* Frameworks */ = {
@@ -553,6 +603,8 @@
 			files = (
 				544978BC1DEC138D00485AED /* LaunchScreen.storyboard in Resources */,
 				544978B91DEC138D00485AED /* Assets.xcassets in Resources */,
+				540426451E01234300AC9D5D /* ProductTableViewCell.xib in Resources */,
+				54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */,
 				543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +680,7 @@
 			files = (
 				544979041DEC13B900485AED /* BaseModel.m in Sources */,
 				543F80411DFFDC7F0061521D /* LoginVIewModel.m in Sources */,
+				54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */,
 				544979061DEC13B900485AED /* BaseViewController.m in Sources */,
 				544979051DEC13B900485AED /* BaseViewModel.m in Sources */,
 				544979371DEFCD8D00485AED /* YTKBatchRequestAgent.m in Sources */,
@@ -637,12 +690,15 @@
 				5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */,
 				544979081DEC13B900485AED /* XDFACTORY.m in Sources */,
 				544979031DEC13B900485AED /* XDTVC.m in Sources */,
+				54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */,
 				544979021DEC13B900485AED /* XDNVC.m in Sources */,
 				5449793A1DEFCD8D00485AED /* YTKNetworkAgent.m in Sources */,
 				5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */,
 				544979391DEFCD8D00485AED /* YTKChainRequestAgent.m in Sources */,
 				544979381DEFCD8D00485AED /* YTKChainRequest.m in Sources */,
 				544978B11DEC138D00485AED /* AppDelegate.m in Sources */,
+				540426441E01234300AC9D5D /* ProductTableViewCell.m in Sources */,
+				540426401E01134200AC9D5D /* ProductModel.m in Sources */,
 				544979361DEFCD8D00485AED /* YTKBatchRequest.m in Sources */,
 				544979071DEC13B900485AED /* CocoaMVVMViewController.m in Sources */,
 				544979351DEFCD8D00485AED /* YTKBaseRequest.m in Sources */,
@@ -712,6 +768,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -735,7 +792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -760,6 +817,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -777,7 +835,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -788,12 +846,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B40A7C9D2DDC523A3E2C4F3E /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92KCXTRXCP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = XDPRO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vdchina.com.XDPRO;
@@ -808,12 +867,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0D56C0493865CD82F9BCF2E /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92KCXTRXCP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = XDPRO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vdchina.com.XDPRO;

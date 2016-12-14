@@ -7,6 +7,6 @@
 //
 #ifndef API_h
 #define API_h
-#define tableViewAPI @"http://api.chuandazhiapp.com/v1/channels/1/items?gender=2&generation=2&limit=20&offset=0"
+#define API_tableView @"http://api.chuandazhiapp.com/v1/channels/1/items?"
 
 #endif /* API_h */

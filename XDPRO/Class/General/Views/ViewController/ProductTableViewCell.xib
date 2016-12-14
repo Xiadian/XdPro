@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProductTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="375" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r61-Eo-Rzp"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRk-i3-KNy">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="r61-Eo-Rzp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5d1-c9-zoS"/>
+                    <constraint firstItem="SRk-i3-KNy" firstAttribute="top" secondItem="r61-Eo-Rzp" secondAttribute="bottom" id="DlX-At-EGL"/>
+                    <constraint firstItem="SRk-i3-KNy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ezx-h4-v1D"/>
+                    <constraint firstAttribute="bottom" secondItem="SRk-i3-KNy" secondAttribute="bottom" id="bkS-cz-ZPF"/>
+                    <constraint firstAttribute="trailing" secondItem="SRk-i3-KNy" secondAttribute="trailing" id="jrA-Ga-Ceh"/>
+                    <constraint firstAttribute="bottom" secondItem="r61-Eo-Rzp" secondAttribute="bottom" constant="20" id="nap-OJ-gjr"/>
+                    <constraint firstAttribute="trailing" secondItem="r61-Eo-Rzp" secondAttribute="trailing" id="pqA-u4-3af"/>
+                    <constraint firstItem="r61-Eo-Rzp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ruq-NH-Tpn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleImg" destination="r61-Eo-Rzp" id="ip3-zj-0zg"/>
+                <outlet property="titleLab" destination="SRk-i3-KNy" id="FPr-sn-waY"/>
+            </connections>
+            <point key="canvasLocation" x="-370" y="-33"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginVIewModel.h"
+#import "ProductViewController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UITextField *userTfd;
@@ -15,14 +16,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property(nonatomic,strong)LoginVIewModel *viewModel;
 @property(nonatomic,strong)NSString *ss;
-
 @end
 @implementation LoginViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //绑定信号
     [self bindSignal];
-    
 }
+/**
+ 绑定信号的方法
+ */
 -(void)bindSignal{
     self.viewModel=[[LoginVIewModel alloc]init];
     RAC(self.viewModel,userTxt)=self.userTfd.rac_textSignal;
@@ -34,26 +37,36 @@
     } ];
     //改变图片
     [self changeImg];
-    //登陆事件
+    //登陆事件绑定
     [self loginEvent];
 }
+/**
+ 改变图片的
+ */
 -(void)changeImg{
     [self.viewModel.imgChangeSignal subscribeNext:^(NSString * x) {
         [self.img sd_setImageWithURL:[NSURL URLWithString:x] placeholderImage:nil];
     }];
 }
-//登陆按钮
+#pragma mark 登陆部分
+/**
+ 登录点击按钮
+ @param sender 按钮
+ */
 - (IBAction)loginClick:(UIButton *)sender {
     [self.viewModel  Login];
 }
+/**
+ 登陆时间处理 包括登陆成功 登陆失败
+ */
 -(void)loginEvent{
     //登陆成功事件
     @weakify(self);
     [self.viewModel.successLoginSignal subscribeNext:^(id x) {
         @strongify(self);
-        UIViewController *dd=[[UIViewController alloc]init];
-        dd.view.backgroundColor=[UIColor redColor];
-        [self.navigationController pushViewController:dd animated:YES];
+        ProductViewController *vc=[[ProductViewController alloc]init];
+        vc.view.backgroundColor=[UIColor redColor];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     //登陆失败事件
     [self.viewModel.failureLoginSignal subscribeNext:^(id x) {

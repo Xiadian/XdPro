@@ -9,7 +9,7 @@
 
 #import "LoginVIewModel.h"
 @interface LoginVIewModel()
-//用户水管
+//用户信号
 @property(nonatomic,strong)RACSignal *userTxtSignal;
 //密码信号
 @property(nonatomic,strong)RACSignal *pswTxtSignal;

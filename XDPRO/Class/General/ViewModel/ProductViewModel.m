@@ -29,17 +29,18 @@
 -(void)getData{
     NSDictionary *dic=@{@"gender":@"2",@"generation":@"2",@"limit":@"20",@"offset":[NSString stringWithFormat:@"%zd",self.page]};
     [XDNetRequest XDHUDRequsetType:GET withRequestUrl:API_tableView withPragram:dic withSuccessBlock:^(id response) {
-              if (self.page==0) {
+        if (self.page==0) {
             [self.dataArr removeAllObjects];
         }
         NSArray *arr=response[@"data"][@"items"];
         for (NSDictionary *dic in arr) {
-           ProductModel *pm=[[ProductModel alloc]init];
+            ProductModel *pm=[[ProductModel alloc]init];
             [pm setValuesForKeysWithDictionary:dic];
             [self.dataArr addObject:pm];
         }
         RACTuple *tupleSuc = RACTuplePack(@(RefreshNormal));
         RACTuple *tupleSucNormoreData = RACTuplePack(@(RefreshNoMoreData));
+        //处理没数据的下拉刷新
         arr.count==0? [self.successGetDataSignal sendNext:tupleSucNormoreData]: [self.successGetDataSignal sendNext:tupleSuc];
     } failure:^(NSError *error) {
         [self.failureGetDataSignal sendNext:@"fail"];

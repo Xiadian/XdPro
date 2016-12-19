@@ -8,7 +8,8 @@
 #import "ProductViewController.h"
 #import "ProductViewModel.h"
 #import "ProductTableViewCell.h"
-@interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "PYSearch.h"
+@interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,PYSearchViewControllerDelegate>
 //tableview
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //数据源数组
@@ -97,5 +98,51 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 150;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 1.创建热门搜索
+    NSArray *hotSeaches = @[@"勇士队", @"库里", @"金州", @"nba"];
+    // 2. 创建控制器
+    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:hotSeaches searchBarPlaceholder:@"搜索你要的内容" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText){
+        // 开始搜索执行以下代码
+        // 如：跳转到指定控制器
+        UIViewController *vv=[[UIViewController alloc]init];
+        vv.view.backgroundColor=[UIColor redColor];
+        [searchViewController.navigationController pushViewController:vv animated:YES];
+    }];
+     searchViewController.hotSearchStyle = (NSInteger)indexPath.row;
+    searchViewController.searchHistoryStyle =  (NSInteger)indexPath.row;
+    // 3. 设置风格
+    /*if (indexPath.section == 0) { // 选择热门搜索
+        searchViewController.hotSearchStyle = (NSInteger)indexPath.row; // 热门搜索风格根据选择
+        searchViewController.searchHistoryStyle = PYHotSearchStyleDefault; // 搜索历史风格为default
+    } else { // 选择搜索历史
+        searchViewController.hotSearchStyle = PYHotSearchStyleDefault; // 热门搜索风格为默认
+        searchViewController.searchHistoryStyle = (NSInteger)indexPath.row; // 搜索历史风格根据选择
+    }*/
+    // 4. 设置代理
+    searchViewController.delegate = self;
+    // 5. 跳转到搜索控制器
+   // UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    [self.navigationController pushViewController:searchViewController animated:YES];
+}
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    CGPoint target=*targetContentOffset;
+    if (velocity.y-0.000001>0||target.y>XDSH) {
+        [UIView animateWithDuration:2 animations:^{
+            [self.navigationController setNavigationBarHidden:YES animated:YES];
+        }];
+    }
+     if (target.y<64) {
+        [UIView animateWithDuration:2 animations:^{
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
+        }];
+    }
+    //NSLog(@"velocity%f",velocity.y);
+    //NSLog(@"targetContentOffset%@",NSStringFromCGPoint(*targetContentOffset));
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.navigationController.navigationBar.hidden=NO;
 }
 @end

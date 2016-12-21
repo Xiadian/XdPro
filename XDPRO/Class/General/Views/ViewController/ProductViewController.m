@@ -33,7 +33,7 @@
     RAC(self,dataArr)=self.viewModel.dataArrSignal;
     //页码绑定
     RAC(self.viewModel,page)=RACObserve(self, page);
-    //绑定事件
+    //绑定事件刷新事件
     [self getDataEvent];
 }
 #pragma mark 获取数据的事件处理
@@ -123,23 +123,11 @@
     // 4. 设置代理
     searchViewController.delegate = self;
     // 5. 跳转到搜索控制器
-   // UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     [self.navigationController pushViewController:searchViewController animated:YES];
 }
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     CGPoint target=*targetContentOffset;
-    if (velocity.y-0.000001>0||target.y>XDSH) {
-        [UIView animateWithDuration:2 animations:^{
-            [self.navigationController setNavigationBarHidden:YES animated:YES];
-        }];
-    }
-     if (target.y<64) {
-        [UIView animateWithDuration:2 animations:^{
-            [self.navigationController setNavigationBarHidden:NO animated:YES];
-        }];
-    }
-    //NSLog(@"velocity%f",velocity.y);
-    //NSLog(@"targetContentOffset%@",NSStringFromCGPoint(*targetContentOffset));
+    [self.viewModel topPushWithTarget:target Velocity:velocity andController:self];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];

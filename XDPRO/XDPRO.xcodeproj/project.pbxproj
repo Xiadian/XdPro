@@ -44,6 +44,9 @@
 		5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979301DEFCD8D00485AED /* YTKNetworkConfig.m */; };
 		5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979321DEFCD8D00485AED /* YTKNetworkPrivate.m */; };
 		5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 544979341DEFCD8D00485AED /* YTKRequest.m */; };
+		54624CC11E07B5F100462C71 /* XDCATransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CC01E07B5F100462C71 /* XDCATransition.m */; };
+		54624CC61E09131400462C71 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CC41E09131400462C71 /* SearchViewController.m */; };
+		54624CC71E09131400462C71 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54624CC51E09131400462C71 /* SearchViewController.xib */; };
 		54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C1C1E001C6A00F96DB9 /* ProductViewController.m */; };
 		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
 		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
@@ -142,6 +145,11 @@
 		544979321DEFCD8D00485AED /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
 		544979331DEFCD8D00485AED /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
 		544979341DEFCD8D00485AED /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
+		54624CBF1E07B5F100462C71 /* XDCATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCATransition.h; sourceTree = "<group>"; };
+		54624CC01E07B5F100462C71 /* XDCATransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCATransition.m; sourceTree = "<group>"; };
+		54624CC31E09131400462C71 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		54624CC41E09131400462C71 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		54624CC51E09131400462C71 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		54758C1B1E001C6A00F96DB9 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		54758C1C1E001C6A00F96DB9 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -425,9 +433,10 @@
 		544978F31DEC13B900485AED /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				543F80351DFFD2070061521D /* LoginViewController */,
 				541202CE1E03984F001ABBF9 /* MainTabViewController */,
 				54758C1A1E001C1600F96DB9 /* ProductViewController */,
-				543F80351DFFD2070061521D /* LoginViewController */,
+				54624CC21E0912EA00462C71 /* SearchViewController */,
 				543F80331DFFCF370061521D /* pracoco */,
 				544978F41DEC13B900485AED /* BaseViewController */,
 			);
@@ -446,6 +455,7 @@
 		544978F91DEC13B900485AED /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				54624CBE1E07B5C600462C71 /* XDCATransition */,
 				543F80301DFFCDC40061521D /* XDNetRequest.h */,
 				543F80311DFFCDCD0061521D /* XDNetRequest.m */,
 				544978FA1DEC13B900485AED /* XDFACTORY.h */,
@@ -509,15 +519,42 @@
 			path = YTKNetwork;
 			sourceTree = "<group>";
 		};
-		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
+		54624CBE1E07B5C600462C71 /* XDCATransition */ = {
 			isa = PBXGroup;
 			children = (
-				54758C1B1E001C6A00F96DB9 /* ProductViewController.h */,
-				54758C1C1E001C6A00F96DB9 /* ProductViewController.m */,
-				54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */,
+				54624CBF1E07B5F100462C71 /* XDCATransition.h */,
+				54624CC01E07B5F100462C71 /* XDCATransition.m */,
+			);
+			name = XDCATransition;
+			sourceTree = "<group>";
+		};
+		54624CC21E0912EA00462C71 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54624CC31E09131400462C71 /* SearchViewController.h */,
+				54624CC41E09131400462C71 /* SearchViewController.m */,
+				54624CC51E09131400462C71 /* SearchViewController.xib */,
+			);
+			name = SearchViewController;
+			sourceTree = "<group>";
+		};
+		54624CC81E09187A00462C71 /* ProductTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				540426411E01234300AC9D5D /* ProductTableViewCell.h */,
 				540426421E01234300AC9D5D /* ProductTableViewCell.m */,
 				540426431E01234300AC9D5D /* ProductTableViewCell.xib */,
+			);
+			name = ProductTableViewCell;
+			sourceTree = "<group>";
+		};
+		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54624CC81E09187A00462C71 /* ProductTableViewCell */,
+				54758C1B1E001C6A00F96DB9 /* ProductViewController.h */,
+				54758C1C1E001C6A00F96DB9 /* ProductViewController.m */,
+				54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */,
 			);
 			name = ProductViewController;
 			sourceTree = "<group>";
@@ -658,6 +695,7 @@
 				54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */,
 				541202DF1E03996B001ABBF9 /* PYSearch.bundle in Resources */,
 				543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */,
+				54624CC71E09131400462C71 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,9 +787,11 @@
 				544979021DEC13B900485AED /* XDNVC.m in Sources */,
 				5449793A1DEFCD8D00485AED /* YTKNetworkAgent.m in Sources */,
 				5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */,
+				54624CC61E09131400462C71 /* SearchViewController.m in Sources */,
 				544979391DEFCD8D00485AED /* YTKChainRequestAgent.m in Sources */,
 				544979381DEFCD8D00485AED /* YTKChainRequest.m in Sources */,
 				544978B11DEC138D00485AED /* AppDelegate.m in Sources */,
+				54624CC11E07B5F100462C71 /* XDCATransition.m in Sources */,
 				540426441E01234300AC9D5D /* ProductTableViewCell.m in Sources */,
 				540426401E01134200AC9D5D /* ProductModel.m in Sources */,
 				541202E21E03996B001ABBF9 /* PYSearchViewController.m in Sources */,

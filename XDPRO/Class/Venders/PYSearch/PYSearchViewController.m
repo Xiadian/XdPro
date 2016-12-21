@@ -644,7 +644,6 @@
                 tag.layer.cornerRadius = tag.py_height * 0.5;
             }
             break;
-            
         default:
             break;
     }
@@ -697,18 +696,18 @@
             break;
     }
 }
-
 /** 点击取消 */
 - (void)cancelDidClick
 {
-    [self.searchBar resignFirstResponder];
-    
-    // dismiss ViewController
-    [self dismissViewControllerAnimated:NO completion:nil];
-    
     // 调用代理方法
     if ([self.delegate respondsToSelector:@selector(didClickCancel:)]) {
         [self.delegate didClickCancel:self];
+    }
+    else{
+        // dismiss ViewController
+        [self.searchBar resignFirstResponder];
+
+        [self dismissViewControllerAnimated:NO completion:nil];
     }
 }
 

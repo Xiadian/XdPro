@@ -24,7 +24,7 @@
     self.successGetDataSignal=[[RACSubject alloc]init];
     self.failureGetDataSignal=[[RACSubject alloc]init];
     self.dataArr=[[NSMutableArray alloc]init];
-}
+ }
 //获取数据
 -(void)getData{
     NSDictionary *dic=@{@"gender":@"2",@"generation":@"2",@"limit":@"20",@"offset":[NSString stringWithFormat:@"%zd",self.page]};
@@ -45,5 +45,15 @@
     } failure:^(NSError *error) {
         [self.failureGetDataSignal sendNext:@"fail"];
     } withHUDTitle:nil];
+}
+-(void)topPushWithTarget:(CGPoint)target Velocity:(CGPoint)velocity andController:(UIViewController *)vc{
+    if (velocity.y-0.000001>0||target.y>0){
+        vc.navigationController.navigationBar.hidden=YES;
+        return;
+    }
+    if (target.y<64) {
+        vc.navigationController.navigationBar.hidden=NO;
+        return;
+    }
 }
 @end

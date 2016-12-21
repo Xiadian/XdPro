@@ -22,6 +22,8 @@ typedef  enum {
 @property(nonatomic,strong)ProductModel *model;
 //数据page页
 @property(nonatomic,assign)NSInteger page;
+
 //获取数据的方法
 -(void)getData;
+-(void)topPushWithTarget:(CGPoint )target Velocity:(CGPoint)velocity andController:(UIViewController *)vc;
 @end

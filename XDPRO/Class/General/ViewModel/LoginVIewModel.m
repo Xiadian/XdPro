@@ -34,10 +34,10 @@
 }
 -(RACSignal *)btnEnble{
 RACSignal *rac=[RACSignal combineLatest:@[_userTxtSignal,_pswTxtSignal] reduce:^id(NSString * x,NSString* y){
-    if (([x isEqualToString:@"xue"]&&[y isEqualToString:@"123"])) {
+    if ([x hasPrefix:@"xue"]&&y.length>2) {
         [_imgChangeSignal sendNext:@"http://img4q.duitang.com/uploads/item/201505/30/20150530111045_EaiKJ.jpeg"];
     }
-    return @(([x isEqualToString:@"xue"]&&[y isEqualToString:@"123"]));
+    return @([x hasPrefix:@"xue"]&&y.length>2);
 }];
     return rac;
 }

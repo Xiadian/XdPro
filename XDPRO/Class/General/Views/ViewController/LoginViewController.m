@@ -8,7 +8,9 @@
 
 #import "LoginViewController.h"
 #import "LoginVIewModel.h"
+#import "MainTabViewController.h"
 #import "ProductViewController.h"
+#import "XDNVC.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UITextField *userTfd;
@@ -20,8 +22,13 @@
 @implementation LoginViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self config];
     //绑定信号
     [self bindSignal];
+}
+-(void)config{
+    self.loginBtn.layer.cornerRadius=10;
+    self.loginBtn.layer.masksToBounds=YES;
 }
 /**
  绑定信号的方法
@@ -39,13 +46,17 @@
     [self changeImg];
     //登陆事件绑定
     [self loginEvent];
+  
 }
 /**
  改变图片的
  */
 -(void)changeImg{
     [self.viewModel.imgChangeSignal subscribeNext:^(NSString * x) {
+        [[XDCATransition getManager]XDCATransitionAddTo:self.img Type:Cube Subtype:FromTop duration:1 andKey:nil];
+          [self.img layoutIfNeeded];
         [self.img sd_setImageWithURL:[NSURL URLWithString:x] placeholderImage:nil];
+        
     }];
 }
 #pragma mark 登陆部分
@@ -54,7 +65,7 @@
  @param sender 按钮
  */
 - (IBAction)loginClick:(UIButton *)sender {
-    [self.viewModel  Login];
+     [self.viewModel  Login];
 }
 /**
  登陆时间处理 包括登陆成功 登陆失败
@@ -64,9 +75,10 @@
     @weakify(self);
     [self.viewModel.successLoginSignal subscribeNext:^(id x) {
         @strongify(self);
-        ProductViewController *vc=[[ProductViewController alloc]init];
+        MainTabViewController *vc=[[MainTabViewController alloc]init];
         vc.view.backgroundColor=[UIColor redColor];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self presentViewController:vc animated:YES
+                    completion:nil];
     }];
     //登陆失败事件
     [self.viewModel.failureLoginSignal subscribeNext:^(id x) {

@@ -19,6 +19,9 @@
 @property(nonatomic,strong)RACSubject *successLoginSignal;
 //登陆失败信号
 @property(nonatomic,strong)RACSubject *failureLoginSignal;
+//
+@property(nonatomic,strong)RACCommand  *ddd;
+
 //登陆事件
 -(void)Login;
 //按钮点击

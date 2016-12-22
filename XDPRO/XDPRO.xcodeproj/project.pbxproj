@@ -51,6 +51,19 @@
 		54624CD21E0B7F8B00462C71 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CCD1E0B7F8B00462C71 /* ZYBannerFooter.m */; };
 		54624CD31E0B7F8B00462C71 /* ZYBannerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54624CCE1E0B7F8B00462C71 /* ZYBannerView.bundle */; };
 		54624CD41E0B7F8B00462C71 /* ZYBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CD01E0B7F8B00462C71 /* ZYBannerView.m */; };
+		54624CF01E0BCF7000462C71 /* ZCAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CD71E0BCF7000462C71 /* ZCAnimatedLabel.m */; };
+		54624CF11E0BCF7000462C71 /* ZCCoreTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CD91E0BCF7000462C71 /* ZCCoreTextLayout.m */; };
+		54624CF21E0BCF7000462C71 /* ZCDashLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CDB1E0BCF7000462C71 /* ZCDashLabel.m */; };
+		54624CF31E0BCF7000462C71 /* ZCDuangLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CDD1E0BCF7000462C71 /* ZCDuangLabel.m */; };
+		54624CF41E0BCF7000462C71 /* ZCEasingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CDF1E0BCF7000462C71 /* ZCEasingUtil.m */; };
+		54624CF51E0BCF7000462C71 /* ZCFallLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CE11E0BCF7000462C71 /* ZCFallLabel.m */; };
+		54624CF61E0BCF7000462C71 /* ZCFlyinLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CE31E0BCF7000462C71 /* ZCFlyinLabel.m */; };
+		54624CF71E0BCF7000462C71 /* ZCFocusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CE51E0BCF7000462C71 /* ZCFocusLabel.m */; };
+		54624CF81E0BCF7000462C71 /* ZCRevealLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CE71E0BCF7000462C71 /* ZCRevealLabel.m */; };
+		54624CF91E0BCF7000462C71 /* ZCShapeshiftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CE91E0BCF7000462C71 /* ZCShapeshiftLabel.m */; };
+		54624CFA1E0BCF7000462C71 /* ZCSpinLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CEB1E0BCF7000462C71 /* ZCSpinLabel.m */; };
+		54624CFB1E0BCF7000462C71 /* ZCThrownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CED1E0BCF7000462C71 /* ZCThrownLabel.m */; };
+		54624CFC1E0BCF7000462C71 /* ZCTransparencyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CEF1E0BCF7000462C71 /* ZCTransparencyLabel.m */; };
 		54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C1C1E001C6A00F96DB9 /* ProductViewController.m */; };
 		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
 		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
@@ -161,6 +174,32 @@
 		54624CCE1E0B7F8B00462C71 /* ZYBannerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYBannerView.bundle; sourceTree = "<group>"; };
 		54624CCF1E0B7F8B00462C71 /* ZYBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerView.h; sourceTree = "<group>"; };
 		54624CD01E0B7F8B00462C71 /* ZYBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerView.m; sourceTree = "<group>"; };
+		54624CD61E0BCF7000462C71 /* ZCAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAnimatedLabel.h; sourceTree = "<group>"; };
+		54624CD71E0BCF7000462C71 /* ZCAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAnimatedLabel.m; sourceTree = "<group>"; };
+		54624CD81E0BCF7000462C71 /* ZCCoreTextLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCoreTextLayout.h; sourceTree = "<group>"; };
+		54624CD91E0BCF7000462C71 /* ZCCoreTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCoreTextLayout.m; sourceTree = "<group>"; };
+		54624CDA1E0BCF7000462C71 /* ZCDashLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDashLabel.h; sourceTree = "<group>"; };
+		54624CDB1E0BCF7000462C71 /* ZCDashLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDashLabel.m; sourceTree = "<group>"; };
+		54624CDC1E0BCF7000462C71 /* ZCDuangLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDuangLabel.h; sourceTree = "<group>"; };
+		54624CDD1E0BCF7000462C71 /* ZCDuangLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDuangLabel.m; sourceTree = "<group>"; };
+		54624CDE1E0BCF7000462C71 /* ZCEasingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCEasingUtil.h; sourceTree = "<group>"; };
+		54624CDF1E0BCF7000462C71 /* ZCEasingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCEasingUtil.m; sourceTree = "<group>"; };
+		54624CE01E0BCF7000462C71 /* ZCFallLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCFallLabel.h; sourceTree = "<group>"; };
+		54624CE11E0BCF7000462C71 /* ZCFallLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCFallLabel.m; sourceTree = "<group>"; };
+		54624CE21E0BCF7000462C71 /* ZCFlyinLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCFlyinLabel.h; sourceTree = "<group>"; };
+		54624CE31E0BCF7000462C71 /* ZCFlyinLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCFlyinLabel.m; sourceTree = "<group>"; };
+		54624CE41E0BCF7000462C71 /* ZCFocusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCFocusLabel.h; sourceTree = "<group>"; };
+		54624CE51E0BCF7000462C71 /* ZCFocusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCFocusLabel.m; sourceTree = "<group>"; };
+		54624CE61E0BCF7000462C71 /* ZCRevealLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCRevealLabel.h; sourceTree = "<group>"; };
+		54624CE71E0BCF7000462C71 /* ZCRevealLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCRevealLabel.m; sourceTree = "<group>"; };
+		54624CE81E0BCF7000462C71 /* ZCShapeshiftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCShapeshiftLabel.h; sourceTree = "<group>"; };
+		54624CE91E0BCF7000462C71 /* ZCShapeshiftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCShapeshiftLabel.m; sourceTree = "<group>"; };
+		54624CEA1E0BCF7000462C71 /* ZCSpinLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSpinLabel.h; sourceTree = "<group>"; };
+		54624CEB1E0BCF7000462C71 /* ZCSpinLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSpinLabel.m; sourceTree = "<group>"; };
+		54624CEC1E0BCF7000462C71 /* ZCThrownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCThrownLabel.h; sourceTree = "<group>"; };
+		54624CED1E0BCF7000462C71 /* ZCThrownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCThrownLabel.m; sourceTree = "<group>"; };
+		54624CEE1E0BCF7000462C71 /* ZCTransparencyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTransparencyLabel.h; sourceTree = "<group>"; };
+		54624CEF1E0BCF7000462C71 /* ZCTransparencyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTransparencyLabel.m; sourceTree = "<group>"; };
 		54758C1B1E001C6A00F96DB9 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		54758C1C1E001C6A00F96DB9 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -478,6 +517,7 @@
 		544978FC1DEC13B900485AED /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				54624CD51E0BCF7000462C71 /* ZCAnimatedLabel */,
 				54624CC91E0B7F8B00462C71 /* ZYBannerView */,
 				541202D21E03996B001ABBF9 /* PYSearch */,
 				544979211DEFCD8D00485AED /* YTKNetwork */,
@@ -572,6 +612,39 @@
 				54624CD01E0B7F8B00462C71 /* ZYBannerView.m */,
 			);
 			path = ZYBannerView;
+			sourceTree = "<group>";
+		};
+		54624CD51E0BCF7000462C71 /* ZCAnimatedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				54624CD61E0BCF7000462C71 /* ZCAnimatedLabel.h */,
+				54624CD71E0BCF7000462C71 /* ZCAnimatedLabel.m */,
+				54624CD81E0BCF7000462C71 /* ZCCoreTextLayout.h */,
+				54624CD91E0BCF7000462C71 /* ZCCoreTextLayout.m */,
+				54624CDA1E0BCF7000462C71 /* ZCDashLabel.h */,
+				54624CDB1E0BCF7000462C71 /* ZCDashLabel.m */,
+				54624CDC1E0BCF7000462C71 /* ZCDuangLabel.h */,
+				54624CDD1E0BCF7000462C71 /* ZCDuangLabel.m */,
+				54624CDE1E0BCF7000462C71 /* ZCEasingUtil.h */,
+				54624CDF1E0BCF7000462C71 /* ZCEasingUtil.m */,
+				54624CE01E0BCF7000462C71 /* ZCFallLabel.h */,
+				54624CE11E0BCF7000462C71 /* ZCFallLabel.m */,
+				54624CE21E0BCF7000462C71 /* ZCFlyinLabel.h */,
+				54624CE31E0BCF7000462C71 /* ZCFlyinLabel.m */,
+				54624CE41E0BCF7000462C71 /* ZCFocusLabel.h */,
+				54624CE51E0BCF7000462C71 /* ZCFocusLabel.m */,
+				54624CE61E0BCF7000462C71 /* ZCRevealLabel.h */,
+				54624CE71E0BCF7000462C71 /* ZCRevealLabel.m */,
+				54624CE81E0BCF7000462C71 /* ZCShapeshiftLabel.h */,
+				54624CE91E0BCF7000462C71 /* ZCShapeshiftLabel.m */,
+				54624CEA1E0BCF7000462C71 /* ZCSpinLabel.h */,
+				54624CEB1E0BCF7000462C71 /* ZCSpinLabel.m */,
+				54624CEC1E0BCF7000462C71 /* ZCThrownLabel.h */,
+				54624CED1E0BCF7000462C71 /* ZCThrownLabel.m */,
+				54624CEE1E0BCF7000462C71 /* ZCTransparencyLabel.h */,
+				54624CEF1E0BCF7000462C71 /* ZCTransparencyLabel.m */,
+			);
+			path = ZCAnimatedLabel;
 			sourceTree = "<group>";
 		};
 		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
@@ -800,6 +873,7 @@
 				544979041DEC13B900485AED /* BaseModel.m in Sources */,
 				543F80411DFFDC7F0061521D /* LoginVIewModel.m in Sources */,
 				541202E41E03996B001ABBF9 /* UIView+PYExtension.m in Sources */,
+				54624CF41E0BCF7000462C71 /* ZCEasingUtil.m in Sources */,
 				54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */,
 				544979061DEC13B900485AED /* BaseViewController.m in Sources */,
 				544979051DEC13B900485AED /* BaseViewModel.m in Sources */,
@@ -808,27 +882,39 @@
 				543F803C1DFFD5D90061521D /* LoginViewController.m in Sources */,
 				54624CD11E0B7F8B00462C71 /* ZYBannerCell.m in Sources */,
 				543F80321DFFCDCD0061521D /* XDNetRequest.m in Sources */,
+				54624CF61E0BCF7000462C71 /* ZCFlyinLabel.m in Sources */,
+				54624CF31E0BCF7000462C71 /* ZCDuangLabel.m in Sources */,
 				5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */,
 				5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */,
+				54624CF71E0BCF7000462C71 /* ZCFocusLabel.m in Sources */,
 				544979081DEC13B900485AED /* XDFACTORY.m in Sources */,
+				54624CF91E0BCF7000462C71 /* ZCShapeshiftLabel.m in Sources */,
 				544979031DEC13B900485AED /* XDTVC.m in Sources */,
 				54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */,
 				54624CD21E0B7F8B00462C71 /* ZYBannerFooter.m in Sources */,
 				544979021DEC13B900485AED /* XDNVC.m in Sources */,
+				54624CFB1E0BCF7000462C71 /* ZCThrownLabel.m in Sources */,
 				5449793A1DEFCD8D00485AED /* YTKNetworkAgent.m in Sources */,
 				5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */,
 				54624CC61E09131400462C71 /* SearchViewController.m in Sources */,
 				544979391DEFCD8D00485AED /* YTKChainRequestAgent.m in Sources */,
+				54624CF11E0BCF7000462C71 /* ZCCoreTextLayout.m in Sources */,
 				544979381DEFCD8D00485AED /* YTKChainRequest.m in Sources */,
 				544978B11DEC138D00485AED /* AppDelegate.m in Sources */,
+				54624CF81E0BCF7000462C71 /* ZCRevealLabel.m in Sources */,
 				54624CC11E07B5F100462C71 /* XDCATransition.m in Sources */,
+				54624CF51E0BCF7000462C71 /* ZCFallLabel.m in Sources */,
+				54624CF21E0BCF7000462C71 /* ZCDashLabel.m in Sources */,
+				54624CF01E0BCF7000462C71 /* ZCAnimatedLabel.m in Sources */,
 				540426441E01234300AC9D5D /* ProductTableViewCell.m in Sources */,
 				540426401E01134200AC9D5D /* ProductModel.m in Sources */,
 				541202E21E03996B001ABBF9 /* PYSearchViewController.m in Sources */,
 				544979361DEFCD8D00485AED /* YTKBatchRequest.m in Sources */,
+				54624CFA1E0BCF7000462C71 /* ZCSpinLabel.m in Sources */,
 				544979071DEC13B900485AED /* CocoaMVVMViewController.m in Sources */,
 				541202D11E039887001ABBF9 /* MainTabViewController.m in Sources */,
 				544979351DEFCD8D00485AED /* YTKBaseRequest.m in Sources */,
+				54624CFC1E0BCF7000462C71 /* ZCTransparencyLabel.m in Sources */,
 				544978AE1DEC138D00485AED /* main.m in Sources */,
 				541202E11E03996B001ABBF9 /* PYSearchSuggestionViewController.m in Sources */,
 			);

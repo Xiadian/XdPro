@@ -44,13 +44,14 @@
     //头视图请求成功
     [self.viewModel.successScorllDataSignal subscribeNext:^(id x) {
         [self topScrollView];
-        [self.banner reloadData];
     }];
     MBProgressHUD *  hud=[MBProgressHUD showHUDAddedTo:XDWindow animated:YES];
     hud.label.text=@"请求中";
     //全部网络请求结束
     [self.viewModel.NetAllDoneDataSignal subscribeNext:^(id x) {
         [hud hideAnimated:YES];
+        [self.banner reloadData];
+        [self.tableView reloadData];
     }];
 }
 #pragma mark 获取数据的事件处理

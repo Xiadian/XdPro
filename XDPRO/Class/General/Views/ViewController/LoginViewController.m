@@ -11,13 +11,14 @@
 #import "MainTabViewController.h"
 #import "ProductViewController.h"
 #import "XDNVC.h"
+#import "ZCAnimatedLabel.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UITextField *userTfd;
 @property (weak, nonatomic) IBOutlet UITextField *pswTfd;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property(nonatomic,strong)LoginVIewModel *viewModel;
-@property(nonatomic,strong)NSString *ss;
+@property (nonatomic, strong) ZCAnimatedLabel *label;
 @end
 @implementation LoginViewController
 - (void)viewDidLoad {
@@ -25,6 +26,19 @@
     [self config];
     //绑定信号
     [self bindSignal];
+    self.label = [[ZCAnimatedLabel alloc] initWithFrame:CGRectMake(15, 65, self.view.frame.size.width - 30, 50)];
+    self.label.animationDuration =3;
+    self.label.animationDelay =2;
+    self.label.text = @"欢迎登陆";
+    [self.view addSubview:self.label];
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    style.lineSpacing = 5;
+//    style.alignment = NSTextAlignmentCenter;
+    NSMutableAttributedString *mutableString = [[[NSAttributedString alloc] initWithString:self.label.text attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20], NSParagraphStyleAttributeName : style, NSForegroundColorAttributeName : [UIColor blackColor]}] mutableCopy];
+//     [mutableString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.7843 green:0.6352 blue:0.7843 alpha:1] range:[mutableString.string rangeOfString:@"紫丁香"]];
+    self.label.attributedString = mutableString;
+     [self.label startAppearAnimation];
+
 }
 -(void)config{
     self.loginBtn.layer.cornerRadius=10;

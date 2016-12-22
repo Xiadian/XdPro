@@ -23,7 +23,6 @@
                 NSString *propertyName = [NSString stringWithUTF8String: property_getName(property)];
                 const char * type = property_getAttributes(property);
                 NSString *attr = [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
-                //NSLog(@"😂%@",attr);
                 if ([attr hasPrefix:@"T@"] && [attr length] > 1) {
                     NSString * typeClassName = [attr substringWithRange:NSMakeRange(3, [attr length]-4)];
                     if ([typeClassName containsString:@"NSString"]) {
@@ -52,7 +51,6 @@
     }
     return self;
 }
-
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }

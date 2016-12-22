@@ -33,7 +33,7 @@
  }
 - (void)updateUI:(NSString *)data1 data2:(NSString *)data2
 {
-    [self.NetAllDoneDataSignal sendNext:@"全部结束"];
+    [self.NetAllDoneDataSignal sendNext:@"全部结束啦"] ;
 }
 //获取数据
 -(void)getData{
@@ -55,11 +55,6 @@
     } failure:^(NSError *error) {
         [self.failureGetDataSignal sendNext:@"fail"];
     }];
-//    [XDNetRequest XDHUDRequsetType:GET withRequestUrl:API_tableView withPragram:dic withSuccessBlock:^(id response) {
-//       
-//       
-//    } failure:^(NSError *error) {
-//       } withHUDTitle:nil];
 }
 -(void)getScrollTopData{
      NSDictionary *dic=@{@"channel":@"iOS"};
@@ -87,8 +82,6 @@
         return;
     }
 }
--(void)allNetReady{
-    NSLog(@"fsdfef");
-}
+
 
 @end

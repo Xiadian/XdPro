@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZCAnimatedLabel.h"
 @interface ProductTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet ZCAnimatedLabel *titleLab;
 @property (weak, nonatomic) IBOutlet UIImageView *titleImg;
 @end

@@ -9,6 +9,7 @@
 #import "ProductViewModel.h"
 #import "ProductTableViewCell.h"
 #import "ZYBannerView.h"
+#import "ZCAnimatedLabel.h"
 @interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,ZYBannerViewDataSource, ZYBannerViewDelegate>
 //tableview
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -159,15 +160,21 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ProductTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"xd"];
     self.viewModel.model=self.dataArr[indexPath.row];
-    cell.titleLab.text=self.viewModel.model.short_title;
+    cell.titleLab.attributedString=[self getMutableStringBy:self.viewModel.model.short_title];
+    [cell.titleLab startAppearAnimation];
     [cell.titleImg sd_setImageWithURL:[NSURL URLWithString:self.viewModel.model.cover_image_url]];
     return cell;
+}
+-(NSMutableAttributedString *)getMutableStringBy:(NSString *)string{
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    style.lineSpacing = 5;
+    return  [[[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName : style, NSForegroundColorAttributeName : [UIColor whiteColor]}] mutableCopy];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return  self.dataArr.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    return 120;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *vv=[[UIViewController alloc]init];

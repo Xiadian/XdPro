@@ -47,6 +47,10 @@
 		54624CC11E07B5F100462C71 /* XDCATransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CC01E07B5F100462C71 /* XDCATransition.m */; };
 		54624CC61E09131400462C71 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CC41E09131400462C71 /* SearchViewController.m */; };
 		54624CC71E09131400462C71 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54624CC51E09131400462C71 /* SearchViewController.xib */; };
+		54624CD11E0B7F8B00462C71 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CCB1E0B7F8B00462C71 /* ZYBannerCell.m */; };
+		54624CD21E0B7F8B00462C71 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CCD1E0B7F8B00462C71 /* ZYBannerFooter.m */; };
+		54624CD31E0B7F8B00462C71 /* ZYBannerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54624CCE1E0B7F8B00462C71 /* ZYBannerView.bundle */; };
+		54624CD41E0B7F8B00462C71 /* ZYBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54624CD01E0B7F8B00462C71 /* ZYBannerView.m */; };
 		54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C1C1E001C6A00F96DB9 /* ProductViewController.m */; };
 		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
 		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
@@ -150,6 +154,13 @@
 		54624CC31E09131400462C71 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		54624CC41E09131400462C71 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		54624CC51E09131400462C71 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		54624CCA1E0B7F8B00462C71 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
+		54624CCB1E0B7F8B00462C71 /* ZYBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerCell.m; sourceTree = "<group>"; };
+		54624CCC1E0B7F8B00462C71 /* ZYBannerFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerFooter.h; sourceTree = "<group>"; };
+		54624CCD1E0B7F8B00462C71 /* ZYBannerFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerFooter.m; sourceTree = "<group>"; };
+		54624CCE1E0B7F8B00462C71 /* ZYBannerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYBannerView.bundle; sourceTree = "<group>"; };
+		54624CCF1E0B7F8B00462C71 /* ZYBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerView.h; sourceTree = "<group>"; };
+		54624CD01E0B7F8B00462C71 /* ZYBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerView.m; sourceTree = "<group>"; };
 		54758C1B1E001C6A00F96DB9 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		54758C1C1E001C6A00F96DB9 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -467,6 +478,7 @@
 		544978FC1DEC13B900485AED /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				54624CC91E0B7F8B00462C71 /* ZYBannerView */,
 				541202D21E03996B001ABBF9 /* PYSearch */,
 				544979211DEFCD8D00485AED /* YTKNetwork */,
 			);
@@ -546,6 +558,20 @@
 				540426431E01234300AC9D5D /* ProductTableViewCell.xib */,
 			);
 			name = ProductTableViewCell;
+			sourceTree = "<group>";
+		};
+		54624CC91E0B7F8B00462C71 /* ZYBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				54624CCA1E0B7F8B00462C71 /* ZYBannerCell.h */,
+				54624CCB1E0B7F8B00462C71 /* ZYBannerCell.m */,
+				54624CCC1E0B7F8B00462C71 /* ZYBannerFooter.h */,
+				54624CCD1E0B7F8B00462C71 /* ZYBannerFooter.m */,
+				54624CCE1E0B7F8B00462C71 /* ZYBannerView.bundle */,
+				54624CCF1E0B7F8B00462C71 /* ZYBannerView.h */,
+				54624CD01E0B7F8B00462C71 /* ZYBannerView.m */,
+			);
+			path = ZYBannerView;
 			sourceTree = "<group>";
 		};
 		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
@@ -696,6 +722,7 @@
 				541202DF1E03996B001ABBF9 /* PYSearch.bundle in Resources */,
 				543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */,
 				54624CC71E09131400462C71 /* SearchViewController.xib in Resources */,
+				54624CD31E0B7F8B00462C71 /* ZYBannerView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				541202E01E03996B001ABBF9 /* PYSearchConst.m in Sources */,
+				54624CD41E0B7F8B00462C71 /* ZYBannerView.m in Sources */,
 				544979041DEC13B900485AED /* BaseModel.m in Sources */,
 				543F80411DFFDC7F0061521D /* LoginVIewModel.m in Sources */,
 				541202E41E03996B001ABBF9 /* UIView+PYExtension.m in Sources */,
@@ -778,12 +806,14 @@
 				541202E31E03996B001ABBF9 /* UIColor+PYExtension.m in Sources */,
 				544979371DEFCD8D00485AED /* YTKBatchRequestAgent.m in Sources */,
 				543F803C1DFFD5D90061521D /* LoginViewController.m in Sources */,
+				54624CD11E0B7F8B00462C71 /* ZYBannerCell.m in Sources */,
 				543F80321DFFCDCD0061521D /* XDNetRequest.m in Sources */,
 				5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */,
 				5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */,
 				544979081DEC13B900485AED /* XDFACTORY.m in Sources */,
 				544979031DEC13B900485AED /* XDTVC.m in Sources */,
 				54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */,
+				54624CD21E0B7F8B00462C71 /* ZYBannerFooter.m in Sources */,
 				544979021DEC13B900485AED /* XDNVC.m in Sources */,
 				5449793A1DEFCD8D00485AED /* YTKNetworkAgent.m in Sources */,
 				5449793D1DEFCD8D00485AED /* YTKRequest.m in Sources */,

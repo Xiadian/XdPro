@@ -46,7 +46,6 @@
     [self changeImg];
     //登陆事件绑定
     [self loginEvent];
-  
 }
 /**
  改变图片的
@@ -56,7 +55,6 @@
         [[XDCATransition getManager]XDCATransitionAddTo:self.img Type:Cube Subtype:FromTop duration:1 andKey:nil];
           [self.img layoutIfNeeded];
         [self.img sd_setImageWithURL:[NSURL URLWithString:x] placeholderImage:nil];
-        
     }];
 }
 #pragma mark 登陆部分

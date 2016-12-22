@@ -7,6 +7,6 @@
 //
 
 #import "BaseViewController.h"
-
+#import "ZYBannerView.h"
 @interface ProductViewController : BaseViewController
 @end

@@ -8,33 +8,50 @@
 #import "ProductViewController.h"
 #import "ProductViewModel.h"
 #import "ProductTableViewCell.h"
-#import "PYSearch.h"
-@interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,PYSearchViewControllerDelegate>
+#import "ZYBannerView.h"
+@interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,ZYBannerViewDataSource, ZYBannerViewDelegate>
 //tableview
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //数据源数组
 @property(nonatomic,strong)NSMutableArray *dataArr;
+//top数组
+@property(nonatomic,strong)NSMutableArray *topDataArr;
 //viewModel
 @property(nonatomic,strong)ProductViewModel *viewModel;
 //刷新的page页码
 @property(nonatomic,assign)NSInteger page;
+@property (nonatomic, strong) ZYBannerView *banner;
 @end
 @implementation ProductViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bindSignal];
+    [self getScrollTopData];
     [self getInit];
 }
 #pragma mark 绑定信号
 -(void)bindSignal{
     self.viewModel=[[ProductViewModel alloc]init];
     self.dataArr=[[NSMutableArray alloc]init];
+    self.topDataArr=[[NSMutableArray alloc]init];
     //绑定数据源
     RAC(self,dataArr)=self.viewModel.dataArrSignal;
     //页码绑定
     RAC(self.viewModel,page)=RACObserve(self, page);
+    RAC(self,topDataArr)=self.viewModel.topDataArrSignal;
     //绑定事件刷新事件
     [self getDataEvent];
+    //头视图请求成功
+    [self.viewModel.successScorllDataSignal subscribeNext:^(id x) {
+        [self topScrollView];
+        [self.banner reloadData];
+    }];
+    MBProgressHUD *  hud=[MBProgressHUD showHUDAddedTo:XDWindow animated:YES];
+    hud.label.text=@"请求中";
+    //全部网络请求结束
+    [self.viewModel.NetAllDoneDataSignal subscribeNext:^(id x) {
+        [hud hideAnimated:YES];
+    }];
 }
 #pragma mark 获取数据的事件处理
 -(void)getDataEvent{
@@ -69,6 +86,9 @@
         [self.tableView.mj_footer endRefreshing];
     }];
 }
+- (void)getScrollTopData{
+    [self.viewModel getScrollTopData];
+}
 #pragma mark 获得初始数据
 -(void)getInit{
      self.page=275;
@@ -85,6 +105,55 @@
         [self.viewModel getData];
     }];
 }
+/**
+ 头部滚动视图
+ */
+-(void)topScrollView{
+    self.banner=[[ZYBannerView alloc] initWithFrame:CGRectMake(0, 64, XDSW, 150)];
+    self.banner.dataSource = self;
+    self.banner.delegate = self;
+    self.tableView.tableHeaderView=self.banner;
+    //循环
+    self.banner.shouldLoop=YES;
+    //自动滚动
+    self.banner.autoScroll=NO;
+    self.banner.scrollInterval=3;
+    //显示又滑那个与循环不共存
+    self.banner.showFooter=YES;
+    //page
+    self.banner.pageControlFrame=CGRectMake(XDSW-120, 130, 100,20);
+    self.banner.pageControl.pageIndicatorTintColor=[UIColor blackColor];
+    //当前颜色
+    self.banner.pageControl.currentPageIndicatorTintColor=[UIColor whiteColor];
+    self.banner.pageControl.numberOfPages=self.topDataArr.count;
+
+}
+//代理滚动数量
+-(NSInteger)numberOfItemsInBanner:(ZYBannerView *)banner{
+       return self.topDataArr.count;
+}
+-(UIView *)banner:(ZYBannerView *)banner viewForItemAtIndex:(NSInteger)index{
+    UIImageView *imageView =[[UIImageView alloc]init];
+    [imageView sd_setImageWithURL: [NSURL URLWithString:self.topDataArr[index]]];
+    return imageView;
+}
+//点击
+- (void)banner:(ZYBannerView *)banner didSelectItemAtIndex:(NSInteger)index{
+}
+- (NSString *)banner:(ZYBannerView *)banner titleForFooterWithState:(ZYBannerFooterState)footerState{
+    if (footerState == ZYBannerFooterStateIdle) {
+        return @"拖动进入下一页";
+    } else if (footerState == ZYBannerFooterStateTrigger) {
+        return @"释放进入下一页";
+    }
+    return nil;
+}
+//到详情
+- (void)bannerFooterDidTrigger:(ZYBannerView *)banner{
+    UIViewController *vv=[[UIViewController alloc]init];
+    vv.view.backgroundColor=XDRandomColor;
+    [self.navigationController pushViewController:vv animated:YES];
+}
 #pragma mark tableview代理
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ProductTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"xd"];
@@ -100,30 +169,9 @@
     return 150;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    // 1.创建热门搜索
-    NSArray *hotSeaches = @[@"勇士队", @"库里", @"金州", @"nba"];
-    // 2. 创建控制器
-    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:hotSeaches searchBarPlaceholder:@"搜索你要的内容" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText){
-        // 开始搜索执行以下代码
-        // 如：跳转到指定控制器
-        UIViewController *vv=[[UIViewController alloc]init];
-        vv.view.backgroundColor=[UIColor redColor];
-        [searchViewController.navigationController pushViewController:vv animated:YES];
-    }];
-     searchViewController.hotSearchStyle = (NSInteger)indexPath.row;
-    searchViewController.searchHistoryStyle =  (NSInteger)indexPath.row;
-    // 3. 设置风格
-    /*if (indexPath.section == 0) { // 选择热门搜索
-        searchViewController.hotSearchStyle = (NSInteger)indexPath.row; // 热门搜索风格根据选择
-        searchViewController.searchHistoryStyle = PYHotSearchStyleDefault; // 搜索历史风格为default
-    } else { // 选择搜索历史
-        searchViewController.hotSearchStyle = PYHotSearchStyleDefault; // 热门搜索风格为默认
-        searchViewController.searchHistoryStyle = (NSInteger)indexPath.row; // 搜索历史风格根据选择
-    }*/
-    // 4. 设置代理
-    searchViewController.delegate = self;
-    // 5. 跳转到搜索控制器
-    [self.navigationController pushViewController:searchViewController animated:YES];
+    UIViewController *vv=[[UIViewController alloc]init];
+    vv.view.backgroundColor=XDRandomColor;
+    [self.navigationController pushViewController:vv animated:YES];
 }
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     CGPoint target=*targetContentOffset;

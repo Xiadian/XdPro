@@ -8,6 +8,7 @@
 #import "ProductViewModel.h"
 @interface ProductViewModel ()
 @property(nonatomic,strong)NSMutableArray *dataArr;
+@property(nonatomic,strong)NSMutableArray *TopArr;
 @end
 @implementation ProductViewModel
 - (instancetype)init
@@ -23,12 +24,21 @@
     self.dataArrSignal=RACObserve(self, dataArr);
     self.successGetDataSignal=[[RACSubject alloc]init];
     self.failureGetDataSignal=[[RACSubject alloc]init];
+    self.successScorllDataSignal=[[RACSubject alloc]init];
+    self.NetAllDoneDataSignal=[[RACSubject alloc]init];
+    self.topDataArrSignal=RACObserve(self, TopArr);
+    [self rac_liftSelector:@selector(updateUI:data2:) withSignalsFromArray:@[self.successGetDataSignal,self.successScorllDataSignal]];
     self.dataArr=[[NSMutableArray alloc]init];
+    self.TopArr=[[NSMutableArray alloc]init];
  }
+- (void)updateUI:(NSString *)data1 data2:(NSString *)data2
+{
+    [self.NetAllDoneDataSignal sendNext:@"全部结束"];
+}
 //获取数据
 -(void)getData{
     NSDictionary *dic=@{@"gender":@"2",@"generation":@"2",@"limit":@"20",@"offset":[NSString stringWithFormat:@"%zd",self.page]};
-    [XDNetRequest XDHUDRequsetType:GET withRequestUrl:API_tableView withPragram:dic withSuccessBlock:^(id response) {
+    [XDNetRequest XDRequsetType:GET withRequestUrl:API_tableView withPragram:dic withSuccessBlock:^(id response) {
         if (self.page==0) {
             [self.dataArr removeAllObjects];
         }
@@ -44,8 +54,29 @@
         arr.count==0? [self.successGetDataSignal sendNext:tupleSucNormoreData]: [self.successGetDataSignal sendNext:tupleSuc];
     } failure:^(NSError *error) {
         [self.failureGetDataSignal sendNext:@"fail"];
-    } withHUDTitle:nil];
+    }];
+//    [XDNetRequest XDHUDRequsetType:GET withRequestUrl:API_tableView withPragram:dic withSuccessBlock:^(id response) {
+//       
+//       
+//    } failure:^(NSError *error) {
+//       } withHUDTitle:nil];
 }
+-(void)getScrollTopData{
+     NSDictionary *dic=@{@"channel":@"iOS"};
+    [XDNetRequest XDRequsetType:GET withRequestUrl:API_SCROLLTOP withPragram:dic withSuccessBlock:^(id response) {
+        NSArray *arr=response[@"data"][@"banners"];
+        for (NSDictionary *dic in arr) {
+            [self.TopArr addObject:dic[@"image_url"]];
+        }
+          [self.successScorllDataSignal sendNext:@"success"];
+    } failure:^(NSError *error) {
+        [self.failureGetDataSignal sendNext:@"fail"];
+    }];
+
+}
+/**
+ 导航栏
+ */
 -(void)topPushWithTarget:(CGPoint)target Velocity:(CGPoint)velocity andController:(UIViewController *)vc{
     if (velocity.y-0.000001>0||target.y>0){
         vc.navigationController.navigationBar.hidden=YES;
@@ -56,4 +87,8 @@
         return;
     }
 }
+-(void)allNetReady{
+    NSLog(@"fsdfef");
+}
+
 @end

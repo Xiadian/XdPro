@@ -5,7 +5,6 @@
 //  Created by XiaDian on 2016/12/8.
 //  Copyright © 2016年 KeBun. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 //请求类型枚举
 typedef   enum {

@@ -15,7 +15,8 @@
     self.titleLab.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.8];
     self.titleLab.animationDuration =0.4;
     self.titleLab.animationDelay =0.05;
-       
+    self.layer.cornerRadius=20;
+    self.layer.masksToBounds=YES;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -10,6 +10,7 @@
 #import "ProductTableViewCell.h"
 #import "ZYBannerView.h"
 #import "ZCAnimatedLabel.h"
+#import "ProDetailViewController.h"
 @interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,ZYBannerViewDataSource, ZYBannerViewDelegate>
 //tableview
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -95,6 +96,8 @@
 -(void)getInit{
      self.page=275;
     [self.tableView registerNib:[UINib nibWithNibName:@"ProductTableViewCell" bundle:nil] forCellReuseIdentifier:@"xd"];
+    self.tableView.rowHeight=UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight=150;
     //获取初始数据
     [self.viewModel getData];
     //初始化刷新控件
@@ -163,12 +166,18 @@
     cell.titleLab.attributedString=[self getMutableStringBy:self.viewModel.model.short_title];
     [cell.titleLab startAppearAnimation];
     [cell.titleImg sd_setImageWithURL:[NSURL URLWithString:self.viewModel.model.cover_image_url]];
+    cell.titleLab.onlyDrawDirtyArea = YES;
+    cell.titleLab.layerBased = NO;
     return cell;
 }
+//标题属性文字生成
 -(NSMutableAttributedString *)getMutableStringBy:(NSString *)string{
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     style.lineSpacing = 5;
+    style.alignment = NSTextAlignmentCenter;
     return  [[[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName : style, NSForegroundColorAttributeName : [UIColor whiteColor]}] mutableCopy];
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return  self.dataArr.count;
@@ -177,8 +186,8 @@
     return 120;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vv=[[UIViewController alloc]init];
-    vv.view.backgroundColor=XDRandomColor;
+    ProDetailViewController *vv=[[ProDetailViewController  alloc]init];
+    self.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:vv animated:YES];
 }
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{

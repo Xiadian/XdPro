@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property(nonatomic,strong)LoginVIewModel *viewModel;
 @property (nonatomic, strong) ZCAnimatedLabel *label;
+@property(nonatomic,strong)NSThread *thread;
 @end
 @implementation LoginViewController
 - (void)viewDidLoad {
@@ -26,10 +27,90 @@
     [self config];
     //绑定信号
     [self bindSignal];
+    [self test];
 }
 -(void)config{
     self.loginBtn.layer.cornerRadius=10;
     self.loginBtn.layer.masksToBounds=YES;
+}
+-(void)test{
+    //1.创建NSBlockOperation对象
+//    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+//        for(int i=0;i<100;i++ ){
+//            NSLog(@"1");
+//        }
+//    }];
+//    NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
+//        for(int i=0;i<100;i++ ){
+//            NSLog(@"2");
+//        }
+//    }];
+//    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
+//        for(int i=0;i<100;i++ ){
+//            NSLog(@"3");
+//        }
+//    }];
+//    NSOperationQueue *queaa=[[NSOperationQueue alloc]init];
+//    queaa.maxConcurrentOperationCount=2;
+//    [queaa addOperations:@[operation,operation1,operation2] waitUntilFinished:NO];
+  
+    
+
+//   NSLog(@" 主线程  %@",[NSThread mainThread]);
+  // dispatch_queue_t queue1 = dispatch_queue_create("sdfsd", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_queue_t queue1 = dispatch_queue_create("sdfsd", NULL);
+    //系统全局并行线程
+    dispatch_queue_t queue1 =  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+        dispatch_async(queue1, ^{
+          self.thread =[NSThread currentThread];
+          [[NSThread currentThread] setName:@"sdfsdfs"];
+           NSLog(@"%zd",[[NSThread currentThread] isFinished]);
+          NSLog(@" 当前线程  %@",self.thread);
+    });
+//    RACSignal *ss=RACObserve(self.thread, isFinished);
+//    [ss subscribeNext:^(id x) {
+//        NSLog(@"%zd",[self.thread isFinished]);
+//    }];
+    dispatch_async(queue1, ^{
+          NSLog(@" 当前线程  %@",[NSThread currentThread]);
+        for(int i=0;i<100;i++ ){
+        }
+    });
+    dispatch_async(queue1, ^{
+          NSLog(@" 当前线程  %@",[NSThread currentThread]);
+        for(int i=0;i<100;i++ ){
+        }
+    });
+//    dispatch_queue_t queue5 = dispatch_queue_create("studyBlocks", NULL);
+//    dispatch_async(queue5, ^{
+//        for(int i=0;i<100;i++ ){
+//            NSLog(@"hi电费%zd",i);
+//        }
+//    });
+//    dispatch_queue_t queue6 = dispatch_queue_create("studyBlocks", NULL);
+//    dispatch_async(queue6, ^{
+//        for(int i=0;i<100;i++ ){
+//            NSLog(@"是%zd",i);
+//        }
+//    });
+
+//   dispatch_group_t  group = dispatch_group_create();
+//    dispatch_queue_t  queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"1");
+//    });
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"2");
+//    });
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"3");
+//    });
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        NSLog(@"4");
+//    });
+//  
+//    
 }
 /**
  绑定信号的方法

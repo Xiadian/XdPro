@@ -131,7 +131,6 @@
     //当前颜色
     self.banner.pageControl.currentPageIndicatorTintColor=[UIColor whiteColor];
     self.banner.pageControl.numberOfPages=self.topDataArr.count;
-
 }
 //代理滚动数量
 -(NSInteger)numberOfItemsInBanner:(ZYBannerView *)banner{
@@ -187,8 +186,9 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ProDetailViewController *vv=[[ProDetailViewController  alloc]init];
-    self.hidesBottomBarWhenPushed=YES;
-    [self.navigationController pushViewController:vv animated:YES];
+    self.viewModel.model=self.dataArr[indexPath.row];
+    vv.url=self.viewModel.model.content_url;
+    [self presentViewController:vv animated:YES completion:nil];
 }
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     CGPoint target=*targetContentOffset;

@@ -28,4 +28,9 @@
     [[UINavigationBar appearance] setBarTintColor:XDRandomColor];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
+//推页面隐藏tabbar
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    viewController.hidesBottomBarWhenPushed = YES;
+    [super pushViewController:viewController animated:animated];
+}
 @end

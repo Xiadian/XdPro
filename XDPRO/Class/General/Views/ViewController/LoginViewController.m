@@ -65,20 +65,20 @@
         dispatch_async(queue1, ^{
           self.thread =[NSThread currentThread];
           [[NSThread currentThread] setName:@"sdfsdfs"];
-           NSLog(@"%zd",[[NSThread currentThread] isFinished]);
-          NSLog(@" 当前线程  %@",self.thread);
+           //NSLog(@"%zd",[[NSThread currentThread] isFinished]);
+         // NSLog(@" 当前线程  %@",self.thread);
     });
 //    RACSignal *ss=RACObserve(self.thread, isFinished);
 //    [ss subscribeNext:^(id x) {
 //        NSLog(@"%zd",[self.thread isFinished]);
 //    }];
     dispatch_async(queue1, ^{
-          NSLog(@" 当前线程  %@",[NSThread currentThread]);
+        //  NSLog(@" 当前线程  %@",[NSThread currentThread]);
         for(int i=0;i<100;i++ ){
         }
     });
     dispatch_async(queue1, ^{
-          NSLog(@" 当前线程  %@",[NSThread currentThread]);
+          //NSLog(@" 当前线程  %@",[NSThread currentThread]);
         for(int i=0;i<100;i++ ){
         }
     });

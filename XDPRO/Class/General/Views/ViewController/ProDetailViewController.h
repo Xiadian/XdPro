@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface ProDetailViewController : BaseViewController
+@property(nonatomic,copy)NSString *url;
 
 @end

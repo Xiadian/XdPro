@@ -19,7 +19,6 @@
 		541202E31E03996B001ABBF9 /* UIColor+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 541202DC1E03996B001ABBF9 /* UIColor+PYExtension.m */; };
 		541202E41E03996B001ABBF9 /* UIView+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 541202DE1E03996B001ABBF9 /* UIView+PYExtension.m */; };
 		542FDAA51E127C1000DE920B /* ProDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542FDAA31E127C1000DE920B /* ProDetailViewController.m */; };
-		542FDAA61E127C1000DE920B /* ProDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542FDAA41E127C1000DE920B /* ProDetailViewController.xib */; };
 		543F80321DFFCDCD0061521D /* XDNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 543F80311DFFCDCD0061521D /* XDNetRequest.m */; };
 		543F803C1DFFD5D90061521D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543F803A1DFFD5D90061521D /* LoginViewController.m */; };
 		543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543F803B1DFFD5D90061521D /* LoginViewController.xib */; };
@@ -69,6 +68,7 @@
 		54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C1C1E001C6A00F96DB9 /* ProductViewController.m */; };
 		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
 		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
+		54FAC7DE1E1B46D5000339EE /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC7DD1E1B46D5000339EE /* WMDragView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +110,6 @@
 		541202DE1E03996B001ABBF9 /* UIView+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYExtension.m"; sourceTree = "<group>"; };
 		542FDAA21E127C1000DE920B /* ProDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProDetailViewController.h; sourceTree = "<group>"; };
 		542FDAA31E127C1000DE920B /* ProDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProDetailViewController.m; sourceTree = "<group>"; };
-		542FDAA41E127C1000DE920B /* ProDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProDetailViewController.xib; sourceTree = "<group>"; };
 		543F80301DFFCDC40061521D /* XDNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDNetRequest.h; sourceTree = "<group>"; };
 		543F80311DFFCDCD0061521D /* XDNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDNetRequest.m; sourceTree = "<group>"; };
 		543F80391DFFD5D90061521D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -210,6 +209,8 @@
 		54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		54758C211E00218700F96DB9 /* ProductViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewModel.h; sourceTree = "<group>"; };
 		54758C221E00218700F96DB9 /* ProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewModel.m; sourceTree = "<group>"; };
+		54FAC7DC1E1B46D5000339EE /* WMDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDragView.h; sourceTree = "<group>"; };
+		54FAC7DD1E1B46D5000339EE /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
 		6D4ED7DFB2061E016C830436 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D56C0493865CD82F9BCF2E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B40A7C9D2DDC523A3E2C4F3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -292,7 +293,6 @@
 			children = (
 				542FDAA21E127C1000DE920B /* ProDetailViewController.h */,
 				542FDAA31E127C1000DE920B /* ProDetailViewController.m */,
-				542FDAA41E127C1000DE920B /* ProDetailViewController.xib */,
 			);
 			name = ProDetailViewController;
 			sourceTree = "<group>";
@@ -532,6 +532,7 @@
 		544978FC1DEC13B900485AED /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC7DB1E1B46D5000339EE /* WMDragView */,
 				54624CD51E0BCF7000462C71 /* ZCAnimatedLabel */,
 				54624CC91E0B7F8B00462C71 /* ZYBannerView */,
 				541202D21E03996B001ABBF9 /* PYSearch */,
@@ -683,6 +684,15 @@
 			name = ProductViewModel;
 			sourceTree = "<group>";
 		};
+		54FAC7DB1E1B46D5000339EE /* WMDragView */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC7DC1E1B46D5000339EE /* WMDragView.h */,
+				54FAC7DD1E1B46D5000339EE /* WMDragView.m */,
+			);
+			path = WMDragView;
+			sourceTree = "<group>";
+		};
 		DDBDEB3EAF1B5A44C0A9CE08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,7 +818,6 @@
 				544978B91DEC138D00485AED /* Assets.xcassets in Resources */,
 				540426451E01234300AC9D5D /* ProductTableViewCell.xib in Resources */,
 				54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */,
-				542FDAA61E127C1000DE920B /* ProDetailViewController.xib in Resources */,
 				541202DF1E03996B001ABBF9 /* PYSearch.bundle in Resources */,
 				543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */,
 				54624CC71E09131400462C71 /* SearchViewController.xib in Resources */,
@@ -904,6 +913,7 @@
 				54624CF31E0BCF7000462C71 /* ZCDuangLabel.m in Sources */,
 				5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */,
 				5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */,
+				54FAC7DE1E1B46D5000339EE /* WMDragView.m in Sources */,
 				54624CF71E0BCF7000462C71 /* ZCFocusLabel.m in Sources */,
 				544979081DEC13B900485AED /* XDFACTORY.m in Sources */,
 				54624CF91E0BCF7000462C71 /* ZCShapeshiftLabel.m in Sources */,

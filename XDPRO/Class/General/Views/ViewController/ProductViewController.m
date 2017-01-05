@@ -9,6 +9,7 @@
 #import "ProductViewModel.h"
 #import "ProductTableViewCell.h"
 #import "ZYBannerView.h"
+#import "TopSideViewController.h"
 #import "ZCAnimatedLabel.h"
 #import "ProDetailViewController.h"
 @interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource,ZYBannerViewDataSource, ZYBannerViewDelegate>
@@ -154,7 +155,7 @@
 }
 //到详情
 - (void)bannerFooterDidTrigger:(ZYBannerView *)banner{
-    UIViewController *vv=[[UIViewController alloc]init];
+    TopSideViewController *vv=[[TopSideViewController alloc]init];
     vv.view.backgroundColor=XDRandomColor;
     [self.navigationController pushViewController:vv animated:YES];
 }
@@ -188,7 +189,7 @@
     ProDetailViewController *vv=[[ProDetailViewController  alloc]init];
     self.viewModel.model=self.dataArr[indexPath.row];
     vv.url=self.viewModel.model.content_url;
-    [self presentViewController:vv animated:YES completion:nil];
+    [self.navigationController pushViewController:vv animated:YES];
 }
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     CGPoint target=*targetContentOffset;

@@ -234,8 +234,7 @@
     }else if(self.isKeepBounds==YES){//自动粘边
         if (self.frame.origin.x< centerX) {
             CGContextRef context = UIGraphicsGetCurrentContext();
-         //   [UIView beginAnimations:@"leftMove" context:context];
-            [UIView beginAnimations:@"rightMove" context:context];
+           [UIView beginAnimations:@"leftMove" context:context];
             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
             [UIView setAnimationDuration:0.5];
             rect.origin.x = self.freeRect.origin.x;

@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background: #EEEEEE;
+	font-size: 62.5%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+input {
+	border-radius: 0;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a:focus,
+input:focus,
+p:focus,
+div:focus {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+.head {
+	width: 100%;
+	line-height: 2.5rem;
+}
+
+input[name="nam"],
+[name="p_num"],
+[name="y_num"] {
+	line-height: 2.5rem;
+	float: right;
+	width: 42%;
+	background: #EEEEEE;
+	margin-right: 6.0rem;
+}
+
+input[name="city-picker"],
+[name="address"] {
+	width: 76%;
+	line-height: 2.5rem;
+	float: right;
+	background: #EEEEEE;
+	font-size: 0.8rem;
+}
+
+label {
+	display: block;
+	border-bottom: 1px solid #D4D4D4;
+	width: 100%;
+	text-indent: 0.2rem;
+}
+
+.default {
+	float: right;
+	width: 36%;
+	margin-top: 0.6rem;
+}
+
+input[name="defa"] {
+	-webkit-appearance: checkbox;
+	float: left;
+	display: block;
+	margin-top: 0.2rem;
+}
+
+.def {
+	border: none;
+}
+
+.save {
+	color: white;
+	text-align: center;
+	background: #FD5A63;
+	line-height: 2.0rem;
+	width: 90%;
+	height: 2.0rem;
+	font-size: 0.8rem;
+	margin: 2.4rem auto;
+	border-radius: 0.3rem;
+}

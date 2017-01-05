@@ -69,6 +69,28 @@
 		54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54758C1D1E001C6A00F96DB9 /* ProductViewController.xib */; };
 		54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54758C221E00218700F96DB9 /* ProductViewModel.m */; };
 		54FAC7DE1E1B46D5000339EE /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC7DD1E1B46D5000339EE /* WMDragView.m */; };
+		54FAC7E31E1BD55B000339EE /* TopSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC7E11E1BD55B000339EE /* TopSideViewController.m */; };
+		54FAC7E41E1BD55B000339EE /* TopSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC7E21E1BD55B000339EE /* TopSideViewController.xib */; };
+		54FAC8281E1CEEC9000339EE /* shop.html in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC8271E1CEEC9000339EE /* shop.html */; };
+		54FAC82C1E1CEEDC000339EE /* css in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC8291E1CEEDC000339EE /* css */; };
+		54FAC82D1E1CEEDC000339EE /* img in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC82A1E1CEEDC000339EE /* img */; };
+		54FAC82E1E1CEEDC000339EE /* js in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC82B1E1CEEDC000339EE /* js */; };
+		54FAC8361E1E16D1000339EE /* AppDelegate+XDLauchAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8351E1E16D1000339EE /* AppDelegate+XDLauchAD.m */; };
+		54FAC8521E1E17B9000339EE /* NSString+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC83B1E1E17B9000339EE /* NSString+XHLaunchAd.m */; };
+		54FAC8531E1E17B9000339EE /* UIImage+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC83D1E1E17B9000339EE /* UIImage+XHLaunchAd.m */; };
+		54FAC8541E1E17B9000339EE /* UIImageView+XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC83F1E1E17B9000339EE /* UIImageView+XHLaunchAdCache.m */; };
+		54FAC8551E1E17B9000339EE /* XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8411E1E17B9000339EE /* XHLaunchAd.m */; };
+		54FAC8561E1E17B9000339EE /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8431E1E17B9000339EE /* XHLaunchAdButton.m */; };
+		54FAC8571E1E17B9000339EE /* XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8451E1E17B9000339EE /* XHLaunchAdCache.m */; };
+		54FAC8581E1E17B9000339EE /* XHLaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8471E1E17B9000339EE /* XHLaunchAdConfiguration.m */; };
+		54FAC8591E1E17B9000339EE /* XHLaunchAdDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8491E1E17B9000339EE /* XHLaunchAdDownload.m */; };
+		54FAC85A1E1E17B9000339EE /* XHLaunchAdDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC84B1E1E17B9000339EE /* XHLaunchAdDownloader.m */; };
+		54FAC85B1E1E17B9000339EE /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC84D1E1E17B9000339EE /* XHLaunchAdImageManager.m */; };
+		54FAC85C1E1E17B9000339EE /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC84F1E1E17B9000339EE /* XHLaunchAdView.m */; };
+		54FAC85D1E1E17B9000339EE /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8511E1E17B9000339EE /* XHLaunchImageView.m */; };
+		54FAC8631E1E1B59000339EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC8621E1E1B59000339EE /* Images.xcassets */; };
+		54FAC88E1E1E2977000339EE /* xiadian.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC88D1E1E2977000339EE /* xiadian.gif */; };
+		54FAC8921E1E2C9A000339EE /* XHLaunchImageAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC8911E1E2C9A000339EE /* XHLaunchImageAdModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +233,43 @@
 		54758C221E00218700F96DB9 /* ProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewModel.m; sourceTree = "<group>"; };
 		54FAC7DC1E1B46D5000339EE /* WMDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDragView.h; sourceTree = "<group>"; };
 		54FAC7DD1E1B46D5000339EE /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
+		54FAC7E01E1BD55B000339EE /* TopSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSideViewController.h; sourceTree = "<group>"; };
+		54FAC7E11E1BD55B000339EE /* TopSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSideViewController.m; sourceTree = "<group>"; };
+		54FAC7E21E1BD55B000339EE /* TopSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopSideViewController.xib; sourceTree = "<group>"; };
+		54FAC8271E1CEEC9000339EE /* shop.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shop.html; sourceTree = "<group>"; };
+		54FAC8291E1CEEDC000339EE /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		54FAC82A1E1CEEDC000339EE /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
+		54FAC82B1E1CEEDC000339EE /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		54FAC8341E1E16D1000339EE /* AppDelegate+XDLauchAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+XDLauchAD.h"; sourceTree = "<group>"; };
+		54FAC8351E1E16D1000339EE /* AppDelegate+XDLauchAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XDLauchAD.m"; sourceTree = "<group>"; };
+		54FAC83A1E1E17B9000339EE /* NSString+XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHLaunchAd.h"; sourceTree = "<group>"; };
+		54FAC83B1E1E17B9000339EE /* NSString+XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHLaunchAd.m"; sourceTree = "<group>"; };
+		54FAC83C1E1E17B9000339EE /* UIImage+XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHLaunchAd.h"; sourceTree = "<group>"; };
+		54FAC83D1E1E17B9000339EE /* UIImage+XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHLaunchAd.m"; sourceTree = "<group>"; };
+		54FAC83E1E1E17B9000339EE /* UIImageView+XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XHLaunchAdCache.h"; sourceTree = "<group>"; };
+		54FAC83F1E1E17B9000339EE /* UIImageView+XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XHLaunchAdCache.m"; sourceTree = "<group>"; };
+		54FAC8401E1E17B9000339EE /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
+		54FAC8411E1E17B9000339EE /* XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAd.m; sourceTree = "<group>"; };
+		54FAC8421E1E17B9000339EE /* XHLaunchAdButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdButton.h; sourceTree = "<group>"; };
+		54FAC8431E1E17B9000339EE /* XHLaunchAdButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdButton.m; sourceTree = "<group>"; };
+		54FAC8441E1E17B9000339EE /* XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdCache.h; sourceTree = "<group>"; };
+		54FAC8451E1E17B9000339EE /* XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdCache.m; sourceTree = "<group>"; };
+		54FAC8461E1E17B9000339EE /* XHLaunchAdConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConfiguration.h; sourceTree = "<group>"; };
+		54FAC8471E1E17B9000339EE /* XHLaunchAdConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConfiguration.m; sourceTree = "<group>"; };
+		54FAC8481E1E17B9000339EE /* XHLaunchAdDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownload.h; sourceTree = "<group>"; };
+		54FAC8491E1E17B9000339EE /* XHLaunchAdDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownload.m; sourceTree = "<group>"; };
+		54FAC84A1E1E17B9000339EE /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
+		54FAC84B1E1E17B9000339EE /* XHLaunchAdDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownloader.m; sourceTree = "<group>"; };
+		54FAC84C1E1E17B9000339EE /* XHLaunchAdImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdImageManager.h; sourceTree = "<group>"; };
+		54FAC84D1E1E17B9000339EE /* XHLaunchAdImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdImageManager.m; sourceTree = "<group>"; };
+		54FAC84E1E1E17B9000339EE /* XHLaunchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdView.h; sourceTree = "<group>"; };
+		54FAC84F1E1E17B9000339EE /* XHLaunchAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdView.m; sourceTree = "<group>"; };
+		54FAC8501E1E17B9000339EE /* XHLaunchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchImageView.h; sourceTree = "<group>"; };
+		54FAC8511E1E17B9000339EE /* XHLaunchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchImageView.m; sourceTree = "<group>"; };
+		54FAC8621E1E1B59000339EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		54FAC88D1E1E2977000339EE /* xiadian.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = xiadian.gif; sourceTree = "<group>"; };
+		54FAC8901E1E2C9A000339EE /* XHLaunchImageAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchImageAdModel.h; sourceTree = "<group>"; };
+		54FAC8911E1E2C9A000339EE /* XHLaunchImageAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchImageAdModel.m; sourceTree = "<group>"; };
 		6D4ED7DFB2061E016C830436 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D56C0493865CD82F9BCF2E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B40A7C9D2DDC523A3E2C4F3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +420,7 @@
 		544978AB1DEC138D00485AED /* XDPRO */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC8621E1E1B59000339EE /* Images.xcassets */,
 				544978AC1DEC138D00485AED /* Supporting Files */,
 			);
 			path = XDPRO;
@@ -395,6 +455,7 @@
 		544978DF1DEC13B900485AED /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC8331E1E166C000339EE /* LaunchScreen */,
 				544978AF1DEC138D00485AED /* AppDelegate.h */,
 				544978B01DEC138D00485AED /* AppDelegate.m */,
 			);
@@ -452,6 +513,7 @@
 		544978E91DEC13B900485AED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC88F1E1E2C80000339EE /* XHLaunchImageAdModel */,
 				5404263D1E01132800AC9D5D /* ProductModel */,
 				544978EA1DEC13B900485AED /* BaseModel */,
 			);
@@ -520,6 +582,8 @@
 		544978F91DEC13B900485AED /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC82F1E1DEDDA000339EE /* CustomURLProtocol */,
+				54FAC8261E1CEEB9000339EE /* HTML */,
 				54624CBE1E07B5C600462C71 /* XDCATransition */,
 				543F80301DFFCDC40061521D /* XDNetRequest.h */,
 				543F80311DFFCDCD0061521D /* XDNetRequest.m */,
@@ -532,6 +596,7 @@
 		544978FC1DEC13B900485AED /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC8391E1E17B9000339EE /* XHLaunchAd */,
 				54FAC7DB1E1B46D5000339EE /* WMDragView */,
 				54624CD51E0BCF7000462C71 /* ZCAnimatedLabel */,
 				54624CC91E0B7F8B00462C71 /* ZYBannerView */,
@@ -544,6 +609,7 @@
 		544978FD1DEC13B900485AED /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC8731E1E1FDC000339EE /* Image */,
 				544978BD1DEC138D00485AED /* Info.plist */,
 				544978BA1DEC138D00485AED /* LaunchScreen.storyboard */,
 				544978B81DEC138D00485AED /* Assets.xcassets */,
@@ -666,6 +732,7 @@
 		54758C1A1E001C1600F96DB9 /* ProductViewController */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC7DF1E1BD53D000339EE /* TopSideViewController */,
 				542FDAA71E127C2300DE920B /* ProDetailViewController */,
 				54624CC81E09187A00462C71 /* ProductTableViewCell */,
 				54758C1B1E001C6A00F96DB9 /* ProductViewController.h */,
@@ -691,6 +758,91 @@
 				54FAC7DD1E1B46D5000339EE /* WMDragView.m */,
 			);
 			path = WMDragView;
+			sourceTree = "<group>";
+		};
+		54FAC7DF1E1BD53D000339EE /* TopSideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC7E01E1BD55B000339EE /* TopSideViewController.h */,
+				54FAC7E11E1BD55B000339EE /* TopSideViewController.m */,
+				54FAC7E21E1BD55B000339EE /* TopSideViewController.xib */,
+			);
+			name = TopSideViewController;
+			sourceTree = "<group>";
+		};
+		54FAC8261E1CEEB9000339EE /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC8291E1CEEDC000339EE /* css */,
+				54FAC82A1E1CEEDC000339EE /* img */,
+				54FAC82B1E1CEEDC000339EE /* js */,
+				54FAC8271E1CEEC9000339EE /* shop.html */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
+		54FAC82F1E1DEDDA000339EE /* CustomURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomURLProtocol;
+			sourceTree = "<group>";
+		};
+		54FAC8331E1E166C000339EE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC8341E1E16D1000339EE /* AppDelegate+XDLauchAD.h */,
+				54FAC8351E1E16D1000339EE /* AppDelegate+XDLauchAD.m */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		54FAC8391E1E17B9000339EE /* XHLaunchAd */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC83A1E1E17B9000339EE /* NSString+XHLaunchAd.h */,
+				54FAC83B1E1E17B9000339EE /* NSString+XHLaunchAd.m */,
+				54FAC83C1E1E17B9000339EE /* UIImage+XHLaunchAd.h */,
+				54FAC83D1E1E17B9000339EE /* UIImage+XHLaunchAd.m */,
+				54FAC83E1E1E17B9000339EE /* UIImageView+XHLaunchAdCache.h */,
+				54FAC83F1E1E17B9000339EE /* UIImageView+XHLaunchAdCache.m */,
+				54FAC8401E1E17B9000339EE /* XHLaunchAd.h */,
+				54FAC8411E1E17B9000339EE /* XHLaunchAd.m */,
+				54FAC8421E1E17B9000339EE /* XHLaunchAdButton.h */,
+				54FAC8431E1E17B9000339EE /* XHLaunchAdButton.m */,
+				54FAC8441E1E17B9000339EE /* XHLaunchAdCache.h */,
+				54FAC8451E1E17B9000339EE /* XHLaunchAdCache.m */,
+				54FAC8461E1E17B9000339EE /* XHLaunchAdConfiguration.h */,
+				54FAC8471E1E17B9000339EE /* XHLaunchAdConfiguration.m */,
+				54FAC8481E1E17B9000339EE /* XHLaunchAdDownload.h */,
+				54FAC8491E1E17B9000339EE /* XHLaunchAdDownload.m */,
+				54FAC84A1E1E17B9000339EE /* XHLaunchAdDownloader.h */,
+				54FAC84B1E1E17B9000339EE /* XHLaunchAdDownloader.m */,
+				54FAC84C1E1E17B9000339EE /* XHLaunchAdImageManager.h */,
+				54FAC84D1E1E17B9000339EE /* XHLaunchAdImageManager.m */,
+				54FAC84E1E1E17B9000339EE /* XHLaunchAdView.h */,
+				54FAC84F1E1E17B9000339EE /* XHLaunchAdView.m */,
+				54FAC8501E1E17B9000339EE /* XHLaunchImageView.h */,
+				54FAC8511E1E17B9000339EE /* XHLaunchImageView.m */,
+			);
+			path = XHLaunchAd;
+			sourceTree = "<group>";
+		};
+		54FAC8731E1E1FDC000339EE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC88D1E1E2977000339EE /* xiadian.gif */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		54FAC88F1E1E2C80000339EE /* XHLaunchImageAdModel */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC8901E1E2C9A000339EE /* XHLaunchImageAdModel.h */,
+				54FAC8911E1E2C9A000339EE /* XHLaunchImageAdModel.m */,
+			);
+			name = XHLaunchImageAdModel;
 			sourceTree = "<group>";
 		};
 		DDBDEB3EAF1B5A44C0A9CE08 /* Frameworks */ = {
@@ -814,14 +966,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FAC8631E1E1B59000339EE /* Images.xcassets in Resources */,
+				54FAC82D1E1CEEDC000339EE /* img in Resources */,
 				544978BC1DEC138D00485AED /* LaunchScreen.storyboard in Resources */,
 				544978B91DEC138D00485AED /* Assets.xcassets in Resources */,
 				540426451E01234300AC9D5D /* ProductTableViewCell.xib in Resources */,
 				54758C1F1E001C6A00F96DB9 /* ProductViewController.xib in Resources */,
 				541202DF1E03996B001ABBF9 /* PYSearch.bundle in Resources */,
 				543F803D1DFFD5D90061521D /* LoginViewController.xib in Resources */,
+				54FAC82C1E1CEEDC000339EE /* css in Resources */,
+				54FAC8281E1CEEC9000339EE /* shop.html in Resources */,
 				54624CC71E09131400462C71 /* SearchViewController.xib in Resources */,
+				54FAC7E41E1BD55B000339EE /* TopSideViewController.xib in Resources */,
+				54FAC82E1E1CEEDC000339EE /* js in Resources */,
 				54624CD31E0B7F8B00462C71 /* ZYBannerView.bundle in Resources */,
+				54FAC88E1E1E2977000339EE /* xiadian.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,20 +1061,27 @@
 				54624CF41E0BCF7000462C71 /* ZCEasingUtil.m in Sources */,
 				54758C1E1E001C6A00F96DB9 /* ProductViewController.m in Sources */,
 				544979061DEC13B900485AED /* BaseViewController.m in Sources */,
+				54FAC8571E1E17B9000339EE /* XHLaunchAdCache.m in Sources */,
 				544979051DEC13B900485AED /* BaseViewModel.m in Sources */,
+				54FAC85C1E1E17B9000339EE /* XHLaunchAdView.m in Sources */,
 				541202E31E03996B001ABBF9 /* UIColor+PYExtension.m in Sources */,
 				544979371DEFCD8D00485AED /* YTKBatchRequestAgent.m in Sources */,
 				543F803C1DFFD5D90061521D /* LoginViewController.m in Sources */,
 				54624CD11E0B7F8B00462C71 /* ZYBannerCell.m in Sources */,
+				54FAC8561E1E17B9000339EE /* XHLaunchAdButton.m in Sources */,
 				543F80321DFFCDCD0061521D /* XDNetRequest.m in Sources */,
 				54624CF61E0BCF7000462C71 /* ZCFlyinLabel.m in Sources */,
 				542FDAA51E127C1000DE920B /* ProDetailViewController.m in Sources */,
 				54624CF31E0BCF7000462C71 /* ZCDuangLabel.m in Sources */,
+				54FAC85A1E1E17B9000339EE /* XHLaunchAdDownloader.m in Sources */,
 				5449793C1DEFCD8D00485AED /* YTKNetworkPrivate.m in Sources */,
 				5449793B1DEFCD8D00485AED /* YTKNetworkConfig.m in Sources */,
 				54FAC7DE1E1B46D5000339EE /* WMDragView.m in Sources */,
 				54624CF71E0BCF7000462C71 /* ZCFocusLabel.m in Sources */,
+				54FAC8361E1E16D1000339EE /* AppDelegate+XDLauchAD.m in Sources */,
 				544979081DEC13B900485AED /* XDFACTORY.m in Sources */,
+				54FAC85D1E1E17B9000339EE /* XHLaunchImageView.m in Sources */,
+				54FAC8591E1E17B9000339EE /* XHLaunchAdDownload.m in Sources */,
 				54624CF91E0BCF7000462C71 /* ZCShapeshiftLabel.m in Sources */,
 				544979031DEC13B900485AED /* XDTVC.m in Sources */,
 				54758C231E00218700F96DB9 /* ProductViewModel.m in Sources */,
@@ -927,12 +1093,18 @@
 				54624CC61E09131400462C71 /* SearchViewController.m in Sources */,
 				544979391DEFCD8D00485AED /* YTKChainRequestAgent.m in Sources */,
 				54624CF11E0BCF7000462C71 /* ZCCoreTextLayout.m in Sources */,
+				54FAC8531E1E17B9000339EE /* UIImage+XHLaunchAd.m in Sources */,
+				54FAC7E31E1BD55B000339EE /* TopSideViewController.m in Sources */,
 				544979381DEFCD8D00485AED /* YTKChainRequest.m in Sources */,
+				54FAC8921E1E2C9A000339EE /* XHLaunchImageAdModel.m in Sources */,
 				544978B11DEC138D00485AED /* AppDelegate.m in Sources */,
 				54624CF81E0BCF7000462C71 /* ZCRevealLabel.m in Sources */,
 				54624CC11E07B5F100462C71 /* XDCATransition.m in Sources */,
+				54FAC8581E1E17B9000339EE /* XHLaunchAdConfiguration.m in Sources */,
 				54624CF51E0BCF7000462C71 /* ZCFallLabel.m in Sources */,
 				54624CF21E0BCF7000462C71 /* ZCDashLabel.m in Sources */,
+				54FAC8551E1E17B9000339EE /* XHLaunchAd.m in Sources */,
+				54FAC85B1E1E17B9000339EE /* XHLaunchAdImageManager.m in Sources */,
 				54624CF01E0BCF7000462C71 /* ZCAnimatedLabel.m in Sources */,
 				540426441E01234300AC9D5D /* ProductTableViewCell.m in Sources */,
 				540426401E01134200AC9D5D /* ProductModel.m in Sources */,
@@ -943,6 +1115,8 @@
 				541202D11E039887001ABBF9 /* MainTabViewController.m in Sources */,
 				544979351DEFCD8D00485AED /* YTKBaseRequest.m in Sources */,
 				54624CFC1E0BCF7000462C71 /* ZCTransparencyLabel.m in Sources */,
+				54FAC8521E1E17B9000339EE /* NSString+XHLaunchAd.m in Sources */,
+				54FAC8541E1E17B9000339EE /* UIImageView+XHLaunchAdCache.m in Sources */,
 				544978AE1DEC138D00485AED /* main.m in Sources */,
 				541202E11E03996B001ABBF9 /* PYSearchSuggestionViewController.m in Sources */,
 			);
@@ -1090,6 +1264,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4575NUE242;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "";
@@ -1111,6 +1286,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4575NUE242;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "";

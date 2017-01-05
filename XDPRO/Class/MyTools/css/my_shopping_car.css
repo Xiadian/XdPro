@@ -1,0 +1,89 @@
+*{
+		margin: 0;
+		padding: 0;
+}
+html,body{
+	
+		background:#D4D4D4;
+		font-size: 62.5%;
+		max-width: 800px;
+		margin:  0 auto;
+}
+input{
+	border-radius: 0;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+	
+	
+a:focus,
+input:focus,
+p:focus,
+div:focus{
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-user-modify:read-write-plaintext-only; 
+}
+
+
+input[name="address"]{
+			background: #FFFFFF;
+			display: block;
+			color: #6C6C6C;
+		
+}
+	
+
+
+.head{
+				background: white;
+				width: 98%;
+				height: 70px;
+				font-size: 1.2rem;
+				padding-left: 2%;
+				line-height: 20px;
+					
+	
+}
+
+.name em{
+				font-style: normal;
+	
+	
+	
+}
+
+
+.add strong,b{
+		color: #6C6C6C;
+		font-size: 1.2rem;
+		font-weight: 100;
+		line-height: 28px;	
+	
+}
+
+
+
+
+
+.footer{
+	
+	
+				width: 90%;
+				height: 4.0rem;
+				background: #FD5A63;
+				color: white;
+				text-align: center;
+				line-height: 4.0rem;
+				position: fixed;
+				bottom: 0;
+				left: 5%;
+				border-radius: 0.5rem;
+					
+}
+
+	
+
+
+

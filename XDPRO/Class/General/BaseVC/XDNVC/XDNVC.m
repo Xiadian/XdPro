@@ -30,7 +30,7 @@
 }
 //推页面隐藏tabbar
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    viewController.hidesBottomBarWhenPushed = YES;
+//    viewController.hidesBottomBarWhenPushed = YES;
     [super pushViewController:viewController animated:animated];
 }
 @end

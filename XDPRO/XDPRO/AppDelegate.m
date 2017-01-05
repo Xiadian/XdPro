@@ -10,17 +10,17 @@
 #import "XDNVC.h"
 #import "CocoaMVVMViewController.h"
 #import "LoginViewController.h"
+#import "AppDelegate+XDLauchAD.h"
 @interface AppDelegate ()
 @end
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-  //  LuanchViewController *ff=[[LuanchViewController alloc]init];
     LoginViewController *ff=[[LoginViewController alloc]init];
     XDNVC *xdnvc=[[XDNVC alloc]initWithRootViewController:ff];
     self.window.rootViewController=xdnvc;
     [self.window makeKeyAndVisible];
-  //    // Override point for customization after application launch.
+    [self XDLauchAD];
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

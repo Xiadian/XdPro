@@ -1,0 +1,105 @@
+*{
+		margin: 0;
+		padding: 0;
+}
+html,body{
+	
+		background:#FFFFFF;
+		font-size: 62.5%;
+		max-width: 800px;
+		margin:  0 auto;
+}
+input{
+	border-radius: 0;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+	
+a:focus,
+input:focus,
+p:focus,
+div:focus{
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-user-modify:read-write-plaintext-only; 
+}
+.head{
+	width: 100%;
+    height: 18.0rem;
+    background: #FD5A63 url(../img/login_background.png) no-repeat center;
+    background-size: 61%;
+}
+
+form{
+			
+			
+			width: 80%;
+			margin:  1.0rem auto 0.0rem;
+			position: relative;
+}
+
+
+
+
+input[type="number"],[type="text"]{
+			height: 3.5rem;
+			width: 90%;
+			border: none;
+			border-bottom: solid #BBBBBB 0.1rem;				
+			padding-left: 10%;
+			font-size: 1.0rem;
+}
+input[type="number"]{
+	
+			background: url(../img/Login_avatar.png) no-repeat left center;
+			background-size: 8%;
+	
+}
+input[type="text"]{
+	
+			background: url(../img/Login_lock.png) no-repeat left center;
+			background-size: 8%;
+	
+	
+}
+
+
+input[type="submit"]{
+			display: block;
+			width: 7.4rem;
+			line-height: 3.5rem;
+			background: #FD5A63;
+			color: #FFFFFF;
+			border-radius: 0.5rem;
+			margin:  3.0rem auto;	
+			font-size: 1.0rem;
+}
+.forget_pass{
+	color: #FD5A63;
+    position: absolute;
+    right: 0.5rem;
+    top: 52%;
+    font-size: 0.9rem;
+    text-decoration: none;
+	
+}
+.reg{
+	display: block;
+	width: 40%;
+	text-align: center;
+   	margin:  0 auto;
+	color: #FD5A63;
+  
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+	
+	
+	
+	
+	
+			
+		
+	
+	

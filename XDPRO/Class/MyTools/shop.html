@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="css/shop.css" type="text/css" />
+		<link rel="stylesheet" href="css/swiper.min.css" type="text/css" />
+	</head>
+
+	<body>
+
+		<div class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="http://img4q.duitang.com/uploads/item/201505/30/20150530111045_EaiKJ.jpeg"></div>
+					<div class="swiper-slide"><img src="img/2.jpg"></div>
+					<div class="swiper-slide"><img src="img/3.jpg"></div>
+					<div class="swiper-slide"><img src="img/4.jpg"></div>
+					<div class="swiper-slide"><img src="img/1.jpg"></div>
+
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+
+			</div>
+
+		</div>
+
+		<div class="contenter">
+
+			<div class="show">
+				<h2>商务男装</h2>
+				<span>
+							
+							
+							商务男装商务男装商务男装商务男装商务男装商务男装商务男装商务男装
+						</span>
+
+			</div>
+
+			<div class="cost">
+
+				<div>
+					<h6>￥1.0</h6>
+					<h6>￥1.0</h6>
+					<h6>￥1.0</h6>
+				</div>
+
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="num">
+				<span>1~2件</span>
+				<span>3~9件</span>
+				<span>≥10件</span>
+
+			</div>
+
+			<div class="count_down">
+
+				<div>
+					<div class="tenant">
+						<img src="img/purchase.png">
+						<span>已有<em>78</em>家商铺采购</span>
+					</div>
+					<div class="cont">
+						<img src="img/count_down.png">
+						<span>倒计时：<em>2</em>天</span>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="particular" id="particular">
+
+				<span>产品详情</span>
+
+			</div>
+			<div class="par" id="par">
+				<div style="width: 100%; height: 200px;"><img src="img/1.jpg"></div>
+				<div style="width: 100%; height: 200px;"><img src="img/3.jpg"></div>
+				<div style="width: 100%; height: 200px;"><img src="img/2.jpg"></div>
+				<div style="width: 100%; height: 200px;"><img src="img/4.jpg"></div>
+				<div style="width: 100%; height: 200px;"><img src="img/3.jpg"></div>
+				<div style="width: 100%; height: 200px;"><img src="img/2.jpg"></div>
+			</div>
+
+		</div>
+
+		<div class="footer">
+
+			<div class="join_shopping_cart"><input type="button" value="加入购物车" class="btn1" id="join_shopping_car"></div>
+			<div class="examine_shopping_car"><input type="button" value="我的购物车" class="btn2" id="examine_shopping_car"></div>
+
+		</div>
+
+		<div class="scrolltop" ;><img src="img/scrollToTop.png"></div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			//轮播
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				spaceBetween: 30,
+			});
+
+			//点击滚动到详情			
+
+			$("#particular").click(function() {
+				$('html,body').animate({
+					scrollTop: '480px'
+				}, 200)
+
+			});
+            //返回顶部
+			function scrll() {
+				var wh = $(window).height();
+				$(window).scroll(function() {
+
+					var s = wh - $(window).scrollTop();
+                  
+
+					if(s < 400) {
+						$(".scrolltop").css("display", "block")
+					} else {
+
+						$(".scrolltop").css("display", "none")
+					}
+
+				});
+
+				$(".scrolltop").click(function() {
+                                      var  a = [1,1,1,1,'78979'];
+                                      var b = {c:3};
+                   
+					$('html,body').animate({
+						scrollTop: '0px'
+					}, 200)
+				})
+			}
+			scrll();
+
+			$("#join_shopping_car").click(function() {
+				  window.webkit.messageHandlers.pop.postMessage(123);
+			})
+		});
+	</script>
+
+</html>

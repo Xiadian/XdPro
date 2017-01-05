@@ -8,7 +8,7 @@
 #import "ProDetailViewController.h"
 #import "WMDragView.h"
 #import <WebKit/WebKit.h>
-@interface ProDetailViewController ()<WKNavigationDelegate>
+@interface ProDetailViewController ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 @property(nonatomic,strong)WKWebView *webView;
 @property (strong, nonatomic) UIProgressView *progressView;
 @property (strong, nonatomic) MBProgressHUD *hud;
@@ -18,12 +18,6 @@
 @implementation ProDetailViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor whiteColor];
-    WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
-    self.webView=[[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height) configuration:config];
-    self.webView.navigationDelegate=self;
-    self.webView.allowsLinkPreview=YES;
-     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.jianshu.com"]]];
     [self.view addSubview:self.webView];
     [self.view addSubview:self.progressView];
     [self getBackView];
@@ -71,6 +65,7 @@
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
      self.progressView.hidden=NO;
     self.hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[_webView configuration].userContentController addScriptMessageHandler: self name:@"pop"];
 }
 -(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     [self.hud hideAnimated:YES];
@@ -79,7 +74,22 @@
     [self.hud hideAnimated:YES];
 }
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    self.navigationItem.title=self.webView.title;
     [self.hud hideAnimated:YES];
+    [self.webView evaluateJavaScript:@"" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+    }];
+}
+//OC在JS调用方法做的处理
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
+{
+    if ([self respondsToSelector:NSSelectorFromString([NSString stringWithFormat:@"%@:", message.name])]) {
+        [self performSelector: NSSelectorFromString([NSString stringWithFormat:@"%@:", message.name]) withObject:message.body afterDelay:0.0f];
+    }
+}
+-(void)pop:(id) body{
+    NSLog(@"%@",body);
+    self.navigationController.navigationBar.barTintColor=XDRandomColor;
+   // [self.webView goBack];
 }
 //是否加载本页面
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
@@ -95,5 +105,40 @@
         _progressView.frame=CGRectMake(0, 20, self.view.bounds.size.width, 2);
     }
     return _progressView;
+}
+-(WKWebView *)webView{
+    if (_webView==nil) {
+        self.view.backgroundColor=[UIColor whiteColor];
+        WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
+        self.webView=[[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) configuration:config];
+        self.webView.navigationDelegate=self;
+        self.webView.UIDelegate=self;
+        self.webView.allowsLinkPreview=YES;
+        //本地\h5
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"shop" ofType:@"html"];
+        NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        NSString *basePath = [[NSBundle mainBundle] bundlePath];
+        NSURL *baseURL = [NSURL fileURLWithPath:basePath];
+        [self.webView loadHTMLString:htmlString baseURL:baseURL];
+        [self.webView sizeToFit];
+        //远程h5
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.jianshu.com"]]];
+    }
+    return _webView;
+}
+-(void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    NSLog(@"%s%@",__func__ ,message);
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert"message:@"JS调用alert"preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"quding" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }]];
+    [self presentViewController:alert animated:YES completion:NULL];
+    NSLog(@"%@", message);
+}
+-(void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler{
+    NSLog(@"%s%@",__func__ ,prompt);
+}
+-(void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
+    NSLog(@"%s%@",__func__ ,message);
 }
 @end

@@ -5,14 +5,13 @@
 //  Created by XiaDian on 2016/12/13.
 //  Copyright © 2016年 vdchina. All rights reserved.
 //
-
 #import "LoginViewController.h"
 #import "LoginVIewModel.h"
 #import "MainTabViewController.h"
 #import "ProductViewController.h"
 #import "XDNVC.h"
 #import "ZCAnimatedLabel.h"
-@interface LoginViewController ()
+@interface LoginViewController ()<CAAnimationDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UITextField *userTfd;
 @property (weak, nonatomic) IBOutlet UITextField *pswTfd;
@@ -27,6 +26,12 @@
     [self config];
     //绑定信号
     [self bindSignal];
+     // interval
+    RACScheduler *dd=[RACScheduler mainThreadScheduler];
+    RACSignal *ddd=[RACSignal interval:4 onScheduler:dd];
+    [ddd subscribeNext:^(id x) {
+    //
+    }];
     [self test];
 }
 -(void)config{
@@ -34,7 +39,112 @@
     self.loginBtn.layer.masksToBounds=YES;
 }
 -(void)test{
-    //1.创建NSBlockOperation对象
+   //需要用到第三方库SDWebImage
+//    UIImageView *v1 = [[UIImageView alloc]init];
+//    [self.view addSubview:v1];
+//    [v1 sd_setImageWithURL: [NSURL URLWithString:@"http://img4q.duitang.com/uploads/item/201505/30/20150530111045_EaiKJ.jpeg"] placeholderImage: [UIImage imageNamed:@"back"]completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        v1.frame=CGRectMake(20, 90,image.size.width, image.size.height);
+//    }];
+//    NSMutableArray *pathArr=[NSMutableArray new];
+//    for (int i=0; i<10; i++) {
+//        CGPoint pastLocation =CGPointMake(arc4random()%(NSInteger)([UIScreen mainScreen].bounds.size.width), arc4random()%(NSInteger)([UIScreen mainScreen].bounds.size.height*3/4));
+//        NSValue *pastpoint=[NSValue valueWithCGPoint:pastLocation];
+//        [pathArr addObject:pastpoint];
+//    }
+//    UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
+//    btn.backgroundColor=[UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+//    btn.frame=CGRectMake(arc4random()%(NSInteger)([UIScreen mainScreen].bounds.size.width), arc4random()%(NSInteger)([UIScreen mainScreen].bounds.size.height), 30, 30);
+//    btn.layer.cornerRadius=15;
+//    btn.clipsToBounds=YES;
+//    [self.view addSubview:btn];
+//    
+//    CAKeyframeAnimation *an=[CAKeyframeAnimation animation];
+//    an.keyPath=@"position";
+//    CGMutablePathRef
+//    path = CGPathCreateMutable();
+//    //将路径的起点定位到
+//    //（50  120）
+//    CGPathMoveToPoint(path,NULL,0.0,0.0);
+//    //下面5行添加5条直线的路径到path中
+//    CGPathAddLineToPoint(path,
+//                         NULL, 60, 130);
+//   CGPathAddLineToPoint(path,
+//                        NULL, XDSW/2.0 ,XDSH/2.0 );
+//    CGPathAddLineToPoint(path,
+//                         NULL, 80, 150);
+//    CGPathAddLineToPoint(path,
+//                         NULL, 90, 160);
+//    CGPathAddLineToPoint(path,
+//                         NULL, 100, 170);
+    //下面四行添加四条曲线路径到path
+//    CGPathAddCurveToPoint(path,NULL,50.0,275.0,150.0,275.0,70.0,120.0);
+//    CGPathAddCurveToPoint(path,NULL,150.0,275.0,250.0,275.0,90.0,120.0);
+//    CGPathAddCurveToPoint(path,NULL,250.0,275.0,350.0,275.0,110.0,120.0);
+//    CGPathAddCurveToPoint(path,NULL,350.0,275.0,450.0,275.0,130.0,120.0);
+//    an.path=path;
+//    an.values=pathArr;
+//    an.duration=10;
+//    an.delegate=self;
+//    an.removedOnCompletion=NO;
+//    an.fillMode=kCAFillModeForwards;
+//    [btn.layer addAnimation:an forKey:nil];
+//    CFRelease(path);
+//    CABasicAnimation *dd=[[CABasicAnimation alloc]init];
+//    dd.keyPath=@"backgroundColor";
+//    dd.fromValue=XDRandomColor;
+//    dd.toValue=XDRandomColor;
+//    dd.duration=1;
+//    CAAnimationGroup *gp=[[CAAnimationGroup alloc]init];
+//    [gp setAnimations:@[an,dd]];
+//    [btn.layer addAnimation:gp forKey:@"fs"];
+    
+//    CAKeyframeAnimation *an=[CAKeyframeAnimation animation];
+//    an.keyPath=@"backgroundColor";
+//    an.values=@[XDRandomColor,XDRandomColor,XDRandomColor,XDRandomColor,XDRandomColor,XDRandomColor,XDRandomColor];
+//    an.duration=10;
+//    an.delegate=self;
+//    an.removedOnCompletion=NO;
+//    an.fillMode=kCAFillModeForwards;
+//    [btn.layer addAnimation:an forKey:nil];
+
+//    transform.scale = 比例转换
+//    
+//    transform.rotation = 旋转
+//    
+//    opacity = 透明度
+//    
+//    margin = 边距
+//    
+//    zPosition
+//    
+//    backgroundColor =   背景颜色
+//    
+//    cornerRadius   = 圆角
+//    
+//    borderWidth
+//    
+//    bounds
+//    
+//    contents
+//    
+//    contentsRect
+//    
+//    frame
+//    
+//    hidden
+//    
+//    mask
+//    
+//    masksToBounds
+//    
+//    position = 位置
+//    
+//    shadowColor
+//    
+//    shadowOffset
+//    
+//    shadowOpacity
+//1.创建NSBlockOperation对象
 //    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
 //        for(int i=0;i<100;i++ ){
 //            NSLog(@"1");
@@ -54,63 +164,8 @@
 //    queaa.maxConcurrentOperationCount=2;
 //    [queaa addOperations:@[operation,operation1,operation2] waitUntilFinished:NO];
   
-    
-
 //   NSLog(@" 主线程  %@",[NSThread mainThread]);
-  // dispatch_queue_t queue1 = dispatch_queue_create("sdfsd", DISPATCH_QUEUE_CONCURRENT);
-//    dispatch_queue_t queue1 = dispatch_queue_create("sdfsd", NULL);
-    //系统全局并行线程
-    dispatch_queue_t queue1 =  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
-        dispatch_async(queue1, ^{
-          self.thread =[NSThread currentThread];
-          [[NSThread currentThread] setName:@"sdfsdfs"];
-           //NSLog(@"%zd",[[NSThread currentThread] isFinished]);
-         // NSLog(@" 当前线程  %@",self.thread);
-    });
-//    RACSignal *ss=RACObserve(self.thread, isFinished);
-//    [ss subscribeNext:^(id x) {
-//        NSLog(@"%zd",[self.thread isFinished]);
-//    }];
-    dispatch_async(queue1, ^{
-        //  NSLog(@" 当前线程  %@",[NSThread currentThread]);
-        for(int i=0;i<100;i++ ){
-        }
-    });
-    dispatch_async(queue1, ^{
-          //NSLog(@" 当前线程  %@",[NSThread currentThread]);
-        for(int i=0;i<100;i++ ){
-        }
-    });
-//    dispatch_queue_t queue5 = dispatch_queue_create("studyBlocks", NULL);
-//    dispatch_async(queue5, ^{
-//        for(int i=0;i<100;i++ ){
-//            NSLog(@"hi电费%zd",i);
-//        }
-//    });
-//    dispatch_queue_t queue6 = dispatch_queue_create("studyBlocks", NULL);
-//    dispatch_async(queue6, ^{
-//        for(int i=0;i<100;i++ ){
-//            NSLog(@"是%zd",i);
-//        }
-//    });
-
-//   dispatch_group_t  group = dispatch_group_create();
-//    dispatch_queue_t  queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    dispatch_group_async(group, queue, ^{
-//        NSLog(@"1");
-//    });
-//    dispatch_group_async(group, queue, ^{
-//        NSLog(@"2");
-//    });
-//    dispatch_group_async(group, queue, ^{
-//        NSLog(@"3");
-//    });
-//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-//        NSLog(@"4");
-//    });
-//  
-//    
 }
 /**
  绑定信号的方法

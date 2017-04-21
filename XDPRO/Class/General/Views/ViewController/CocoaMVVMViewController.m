@@ -88,24 +88,24 @@
          }];
 }
 - (void)racSignalPass {
-    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@"老板向我扔过来一个Star"];
-        return nil;
-    }] flattenMap:^RACStream *(NSString *value) {
-        NSLog(@"RAC信号传递------%@",value);
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [subscriber sendNext:@"我向老板扔回一块板砖"];
-            return nil;
-        }];
-    }] flattenMap:^RACStream *(NSString *value) {
-        NSLog(@"RAC信号传递------%@",value);
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [subscriber sendNext:@"我跟老板正面刚~,结果可想而知"];
-            return nil;
-        }];
-    }] subscribeNext:^(id x) {
-        NSLog(@"RAC信号传递------%@",x);
-    }];
+//    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@"老板向我扔过来一个Star"];
+//        return nil;
+//    }] flattenMap:^RACStream *(NSString *value) {
+//        NSLog(@"RAC信号传递------%@",value);
+//        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//            [subscriber sendNext:@"我向老板扔回一块板砖"];
+//            return nil;
+//        }];
+//    }] flattenMap:^RACStream *(NSString *value) {
+//        NSLog(@"RAC信号传递------%@",value);
+//        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//            [subscriber sendNext:@"我跟老板正面刚~,结果可想而知"];
+//            return nil;
+//        }];
+//    }] subscribeNext:^(id x) {
+//        NSLog(@"RAC信号传递------%@",x);
+//    }];
 }
 - (void)racSignalOther {
     //延迟

@@ -17,9 +17,8 @@ PODS:
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
-  - ReactiveCocoa (4.2.1):
-    - Result (~> 2.0)
-  - Result (2.1.3)
+  - ReactiveObjC (2.1.2)
+  - SDAutoLayout (2.1.7)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -29,7 +28,8 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MJRefresh
-  - ReactiveCocoa (~> 4.2.0)
+  - ReactiveObjC (~> 2.1.2)
+  - SDAutoLayout
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -37,8 +37,10 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
-  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9d25b081114e36a2397a51361f1c802e606e1d4d
+
+COCOAPODS: 1.2.0

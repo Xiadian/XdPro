@@ -28,11 +28,13 @@
     self.NetAllDoneDataSignal=[[RACSubject alloc]init];
     self.topDataArrSignal=RACObserve(self, TopArr);
     [self rac_liftSelector:@selector(updateUI:data2:) withSignalsFromArray:@[self.successGetDataSignal,self.successScorllDataSignal]];
+    
+    [self rac_liftSelector:@selector(updateUI:data2:) withSignals:self.successGetDataSignal,self.successScorllDataSignal, nil];
     self.dataArr=[[NSMutableArray alloc]init];
     self.TopArr=[[NSMutableArray alloc]init];
  }
 - (void)updateUI:(NSString *)data1 data2:(NSString *)data2
-{
+{  
     [self.NetAllDoneDataSignal sendNext:@"全部结束啦"] ;
 }
 //获取数据

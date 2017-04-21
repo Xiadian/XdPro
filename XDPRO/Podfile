@@ -1,6 +1,9 @@
+target 'XDPRO' do
 #响应编程框架
+
 use_frameworks!
-pod'ReactiveCocoa','~>4.2.0'
+pod 'SDAutoLayout'
+pod 'ReactiveObjC', '~> 2.1.2'
 #刷新
 pod'MJRefresh'
 #HUD
@@ -11,4 +14,4 @@ pod'SDWebImage'
 pod 'Masonry'
 #网络请求复杂分装
 pod 'AFNetworking'
-
+end

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 vdchina. All rights reserved.
 //
 #import "XDFACTORY.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 @implementation XDFACTORY
 //创建btn
 +(UIButton *)creatBtnWithFrame:(CGRect)frame andBackImg:(UIImage *)img andWithBackColor:(UIColor *)color andBtnTitle:(NSString *)title andAddView:(UIView *)view andTouchBlock:(void (^)(id))touchBlock{

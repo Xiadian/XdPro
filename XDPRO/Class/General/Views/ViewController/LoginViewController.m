@@ -26,11 +26,14 @@
     [self config];
     //绑定信号
     [self bindSignal];
-     // interval
-    RACScheduler *dd=[RACScheduler mainThreadScheduler];
+     // interval定时器的应用
+    RACScheduler *dd=[RACScheduler schedulerWithPriority:RACSchedulerPriorityDefault];
     RACSignal *ddd=[RACSignal interval:4 onScheduler:dd];
+    @weakify(self);
     [ddd subscribeNext:^(id x) {
-    //
+        NSLog(@"%@",[NSThread currentThread]);
+        @strongify(self);
+        
     }];
     [self test];
 }
